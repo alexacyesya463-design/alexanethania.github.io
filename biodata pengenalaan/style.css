@@ -7,10 +7,12 @@ body{
     animation:gradientBG 12s ease infinite;
     transition:.4s;
 }
+
 body.dark{
     background: linear-gradient(-45deg,#000,#121212,#1f1f1f,#333);
 }
 
+/* CARD */
 .container{
     width:90%;
     max-width:760px;
@@ -21,16 +23,77 @@ body.dark{
     box-shadow:0 25px 50px rgba(0,0,0,.4);
     animation:floatCard 4s ease-in-out infinite;
 }
-body.dark .container{background:#1e1e1e;}
 
-h1{text-align:center;color:#0a1f44;}
-body.dark h1{color:#fff;}
+body.dark .container{
+    background:#1e1e1e;
+}
 
-.motto{text-align:center;font-style:italic;margin-bottom:10px;}
-.time{text-align:center;font-size:14px;margin-bottom:12px;}
+/* TITLE */
+h1{
+    text-align:center;
+    color:#0a1f44;
+}
 
+body.dark h1{
+    color:#fff;
+}
+
+/* FOTO BESAR */
+.photo{
+    text-align:center;
+    margin:30px 0;
+}
+
+.photo img{
+    width:450px;        /* BESAR */
+    height:450px;
+    border-radius:50%;
+    object-fit:cover;
+    border:8px solid #0a1f44;
+    box-shadow:0 20px 50px rgba(0,0,0,.4);
+    transition:.4s ease;
+}
+
+.photo img:hover{
+    transform:scale(1.08);
+}
+
+/* MOTTO */
+.motto{
+    text-align:center;
+    font-style:italic;
+    margin-bottom:15px;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+td:first-child{
+    font-weight:bold;
+    color:#0a1f44;
+}
+
+body.dark td{
+    border-color:#444;
+    color:#eee;
+}
+
+body.dark td:first-child{
+    color:#9ecbff;
+}
+
+/* MUSIC PLAYER */
 .music-player{
-    margin-top:15px;
+    margin-top:20px;
     text-align:center;
 }
 
@@ -39,80 +102,13 @@ body.dark h1{color:#fff;}
     margin:8px 0;
 }
 
-.controls button{
-    background:#0a1f44;
-    color:#fff;
-    border:none;
-    padding:8px 14px;
-    margin:4px;
-    border-radius:6px;
-    cursor:pointer;
-}
-
-.controls button:hover{
-    transform:scale(1.1);
-}
-
 .time{
     font-size:14px;
     margin-bottom:4px;
 }
 
-
-
-.photo {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.profile-img {
-    width: 350px; /* ukuran besar */
-    height: 350px;
-    object-fit: cover;
-    border-radius: 50%; /* jadi bulat */
-    border: 6px solid white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    transition: 0.4s ease;
-}
-
-.profile-img:hover {
-    transform: scale(1.05);
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
-}
-td{
-    padding:10px;
-    border-bottom:1px solid #ddd;
-}
-td:first-child{
-    font-weight:bold;
-    color:#0a1f44;
-}
-body.dark td{
-    border-color:#444;
-    color:#eee;
-}
-body.dark td:first-child{color:#9ecbff;}
-
-.skill{margin:15px 0;}
-.skill span{font-weight:bold;}
-.bar{
-    background:#ddd;
-    border-radius:20px;
-    overflow:hidden;
-}
-.fill{
-    height:12px;
-    width:0;
-    background:linear-gradient(90deg,#3a7bd5,#00d2ff);
-    animation:fillBar 2s forwards;
-}
-
-.buttons{text-align:center;margin-top:25px;}
+/* BUTTONS */
+.controls button,
 button{
     background:#0a1f44;
     color:#fff;
@@ -123,8 +119,18 @@ button{
     cursor:pointer;
     transition:.3s;
 }
-button:hover{transform:scale(1.1);}
 
+button:hover,
+.controls button:hover{
+    transform:scale(1.1);
+}
+
+.buttons{
+    text-align:center;
+    margin-top:25px;
+}
+
+/* FOOTER */
 .footer{
     text-align:center;
     margin-top:25px;
@@ -138,19 +144,8 @@ button:hover{transform:scale(1.1);}
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
+
 @keyframes floatCard{
     0%,100%{transform:translateY(0);}
     50%{transform:translateY(-14px);}
-}
-@keyframes glow{
-    from{box-shadow:0 0 10px #0a1f44;}
-    to{box-shadow:0 0 28px #0a1f44;}
-}
-@keyframes pulse{
-    0%{opacity:1;}
-    50%{opacity:.6;}
-    100%{opacity:1;}
-}
-@keyframes fillBar{
-    to{width:var(--level);}
 }
