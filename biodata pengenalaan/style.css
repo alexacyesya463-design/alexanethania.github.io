@@ -45,8 +45,8 @@ body.dark h1{
 }
 
 .photo img{
-    width:450px;        /* BESAR */
-    height:450px;
+    width:600px;        /* BESAR */
+    height:600px;
     border-radius:50%;
     object-fit:cover;
     border:8px solid #0a1f44;
