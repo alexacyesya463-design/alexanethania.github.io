@@ -1,3 +1,4 @@
+/* ================== BODY ================== */
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin:0;
@@ -12,15 +13,15 @@ body.dark{
     background: linear-gradient(-45deg,#000,#121212,#1f1f1f,#333);
 }
 
-/* CARD */
+/* ================== CARD ================== */
 .container{
-    width:90%;
-    max-width:760px;
+    width:95%;
+    max-width:900px;   /* Dibesarkan supaya foto lega */
     margin:60px auto;
     background:#fff;
-    border-radius:18px;
-    padding:35px;
-    box-shadow:0 25px 50px rgba(0,0,0,.4);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 30px 60px rgba(0,0,0,.4);
     animation:floatCard 4s ease-in-out infinite;
 }
 
@@ -28,7 +29,7 @@ body.dark .container{
     background:#1e1e1e;
 }
 
-/* TITLE */
+/* ================== TITLE ================== */
 h1{
     text-align:center;
     color:#0a1f44;
@@ -38,34 +39,36 @@ body.dark h1{
     color:#fff;
 }
 
-/* FOTO BESAR */
+/* ================== FOTO SUPER BESAR ================== */
 .photo{
     text-align:center;
     margin:50px 0;
 }
 
 .photo img{
-    width:600px;        /* BESAR */
-    height:600px;
+    width:80%;              /* Ikut lebar card */
+    max-width:650px;        /* Maksimal besar */
+    height:auto;
+    aspect-ratio:1/1;       /* Tetap bulat sempurna */
     border-radius:50%;
     object-fit:cover;
-    border:8px solid #0a1f44;
-    box-shadow:0 20px 50px rgba(0,0,0,.4);
+    border:10px solid #0a1f44;
+    box-shadow:0 25px 70px rgba(0,0,0,.5);
     transition:.4s ease;
 }
 
 .photo img:hover{
-    transform:scale(1.08);
+    transform:scale(1.05);
 }
 
-/* MOTTO */
+/* ================== MOTTO ================== */
 .motto{
     text-align:center;
     font-style:italic;
-    margin-bottom:15px;
+    margin-bottom:20px;
 }
 
-/* TABLE */
+/* ================== TABLE ================== */
 table{
     width:100%;
     border-collapse:collapse;
@@ -73,7 +76,7 @@ table{
 }
 
 td{
-    padding:10px;
+    padding:12px;
     border-bottom:1px solid #ddd;
 }
 
@@ -91,9 +94,9 @@ body.dark td:first-child{
     color:#9ecbff;
 }
 
-/* MUSIC PLAYER */
+/* ================== MUSIC PLAYER ================== */
 .music-player{
-    margin-top:20px;
+    margin-top:25px;
     text-align:center;
 }
 
@@ -107,7 +110,7 @@ body.dark td:first-child{
     margin-bottom:4px;
 }
 
-/* BUTTONS */
+/* ================== BUTTONS ================== */
 .controls button,
 button{
     background:#0a1f44;
@@ -130,7 +133,7 @@ button:hover,
     margin-top:25px;
 }
 
-/* FOOTER */
+/* ================== FOOTER ================== */
 .footer{
     text-align:center;
     margin-top:25px;
@@ -138,7 +141,7 @@ button:hover,
     color:#777;
 }
 
-/* ANIMATIONS */
+/* ================== ANIMATIONS ================== */
 @keyframes gradientBG{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
