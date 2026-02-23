@@ -1,153 +1,88 @@
-/* ================= BODY ================= */
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin:0;
-    min-height:100vh;
-    background: linear-gradient(-45deg,#0a1f44,#1b3b6f,#3a7bd5,#00d2ff);
-    background-size:400% 400%;
-    animation:gradientBG 12s ease infinite;
-    transition:.4s;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexa Nethania Cyesya">
+    <title>Biodata Diri</title>
 
-body.dark{
-    background: linear-gradient(-45deg,#000,#121212,#1f1f1f,#333);
-}
+    <!-- HUBUNGKAN CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
 
-/* ================= CONTAINER ================= */
-.container{
-    width:95%;
-    max-width:1100px;   /* Diperlebar lagi */
-    margin:60px auto;
-    background:#fff;
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 30px 60px rgba(0,0,0,.4);
-    animation:floatCard 4s ease-in-out infinite;
-}
+<body>
 
-body.dark .container{
-    background:#1e1e1e;
-}
+<header>
+    <h1>Biodata Pribadi</h1>
+</header>
 
-/* ================= TITLE ================= */
-h1{
-    text-align:center;
-    color:#0a1f44;
-}
+<hr>
 
-body.dark h1{
-    color:#fff;
-}
+<div class="container">
 
-/* ================= FOTO SUPER BESAR ================= */
-.photo{
-    text-align:center;
-    margin:60px 0;
-}
+    <figure class="photo">
+        <img src="./foto.JPEG" alt="Foto Profil">
+    </figure>
 
-.photo img{
-    width:700px;          /* BENAR-BENAR BESAR */
-    max-width:100%;       /* Supaya tidak keluar layar */
-    height:700px;
-    border-radius:50%;
-    object-fit:cover;
-    border:12px solid #0a1f44;
-    box-shadow:0 30px 80px rgba(0,0,0,.5);
-    transition:.4s ease;
-}
+    <section>
+        <div class="motto" id="motto">
+            "Terus belajar, berkembang, dan pantang menyerah."
+        </div>
+    </section>
 
-.photo img:hover{
-    transform:scale(1.05);
-}
+    <section>
+        <h2>Data Diri</h2>
+        <table>
+            <tr><td>Nama</td><td>: Alexa Nethania Cyesya</td></tr>
+            <tr><td>Prodi</td><td>: Sistem Informasi</td></tr>
+            <tr><td>NPM</td><td>: 2531145</td></tr>
+            <tr><td>Status</td><td>: Mahasiswa</td></tr>
+            <tr><td>Umur</td><td>: 20 Tahun</td></tr>
+            <tr><td>Alamat</td><td>: Batam, Indonesia</td></tr>
+            <tr><td>Cita-cita</td><td>: Business Analyst</td></tr>
+            <tr><td>Hobi</td><td>: Berenang dan Memasak</td></tr>
+        </table>
+    </section>
 
-/* ================= MOTTO ================= */
-.motto{
-    text-align:center;
-    font-style:italic;
-    margin-bottom:20px;
-}
+    <details>
+        <summary>Klik untuk melihat deskripsi diri</summary>
+        <p>Saya adalah mahasiswa Sistem Informasi yang tertarik pada bidang Business Analyst dan pengembangan teknologi digital.</p>
+    </details>
 
-/* ================= TABLE ================= */
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
-}
+    <section class="music-player" id="musicPlayer" style="display:none;">
+        <h3>Music Player 🎵</h3>
 
-td{
-    padding:12px;
-    border-bottom:1px solid #ddd;
-}
+        <audio id="music" src="./bergema sampai selamanya.mp3"></audio>
 
-td:first-child{
-    font-weight:bold;
-    color:#0a1f44;
-}
+        <div class="time">
+            <span id="currentTime">00:00</span> /
+            <span id="duration">00:00</span>
+        </div>
 
-body.dark td{
-    border-color:#444;
-    color:#eee;
-}
+        <input type="range" id="progress" value="0">
 
-body.dark td:first-child{
-    color:#9ecbff;
-}
+        <div class="controls">
+            <button onclick="backward()">⏪ 10s</button>
+            <button onclick="toggleMusic()">▶ / ⏸</button>
+            <button onclick="forward()">10s ⏩</button>
+        </div>
+    </section>
 
-/* ================= MUSIC PLAYER ================= */
-.music-player{
-    margin-top:25px;
-    text-align:center;
-}
+</div>
 
-.music-player input[type="range"]{
-    width:100%;
-    margin:8px 0;
-}
+<div class="buttons">
+    <button onclick="tampilSalam()">Salam</button>
+    <button onclick="ubahMoto()">Ubah Moto</button>
+    <button onclick="toggleDark()">Dark / Light</button>
+    <button onclick="toggleMusic()">▶ Play / ⏸ Musik</button>
+</div>
 
-.time{
-    font-size:14px;
-    margin-bottom:4px;
-}
+<footer class="footer">
+    <small>© 2026 | Website Biodata Pribadi</small>
+</footer>
 
-/* ================= BUTTON ================= */
-.controls button,
-button{
-    background:#0a1f44;
-    color:#fff;
-    border:none;
-    padding:10px 18px;
-    margin:6px;
-    border-radius:8px;
-    cursor:pointer;
-    transition:.3s;
-}
+<!-- HUBUNGKAN JAVASCRIPT -->
+<script src="./script.js"></script>
 
-button:hover,
-.controls button:hover{
-    transform:scale(1.1);
-}
-
-.buttons{
-    text-align:center;
-    margin-top:25px;
-}
-
-/* ================= FOOTER ================= */
-.footer{
-    text-align:center;
-    margin-top:25px;
-    font-size:14px;
-    color:#777;
-}
-
-/* ================= ANIMATION ================= */
-@keyframes gradientBG{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
-
-@keyframes floatCard{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-14px);}
-}
+</body>
+</html>

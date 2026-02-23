@@ -2,67 +2,87 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexa Nethania Cyesya">
     <title>Biodata Diri</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- HUBUNGKAN CSS -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-<div class="container">
+<header>
     <h1>Biodata Pribadi</h1>
+</header>
 
-    <div class="photo">
-        <img src="foto.JPEG" alt="Foto Profil">
-    </div>
+<hr>
 
-    <div class="motto" id="motto">
-        "Terus belajar, berkembang, dan pantang menyerah."
+<div class="container">
+
+    <figure class="photo">
+        <img src="./foto.JPEG" alt="Foto Profil">
+    </figure>
+
+    <section>
+        <div class="motto" id="motto">
+            "Terus belajar, berkembang, dan pantang menyerah."
+        </div>
+    </section>
+
+    <section>
+        <h2>Data Diri</h2>
+        <table>
+            <tr><td>Nama</td><td>: Alexa Nethania Cyesya</td></tr>
+            <tr><td>Prodi</td><td>: Sistem Informasi</td></tr>
+            <tr><td>NPM</td><td>: 2531145</td></tr>
+            <tr><td>Status</td><td>: Mahasiswa</td></tr>
+            <tr><td>Umur</td><td>: 20 Tahun</td></tr>
+            <tr><td>Alamat</td><td>: Batam, Indonesia</td></tr>
+            <tr><td>Cita-cita</td><td>: Business Analyst</td></tr>
+            <tr><td>Hobi</td><td>: Berenang dan Memasak</td></tr>
+        </table>
+    </section>
+
+    <details>
+        <summary>Klik untuk melihat deskripsi diri</summary>
+        <p>Saya adalah mahasiswa Sistem Informasi yang tertarik pada bidang Business Analyst dan pengembangan teknologi digital.</p>
+    </details>
+
+    <section class="music-player" id="musicPlayer" style="display:none;">
+        <h3>Music Player 🎵</h3>
+
+        <audio id="music" src="./bergema sampai selamanya.mp3"></audio>
+
+        <div class="time">
+            <span id="currentTime">00:00</span> /
+            <span id="duration">00:00</span>
+        </div>
+
+        <input type="range" id="progress" value="0">
+
+        <div class="controls">
+            <button onclick="backward()">⏪ 10s</button>
+            <button onclick="toggleMusic()">▶ / ⏸</button>
+            <button onclick="forward()">10s ⏩</button>
+        </div>
+    </section>
+
 </div>
 
-    <div class="time" id="time"></div>
-    <div class="music-title" id="musicTitle"></div>
-
-    <table>
-        <tr><td>Nama</td><td>: Alexa Nethania Cyesya</td></tr>
-        <tr><td>Prodi</td><td>: sistem informasi</td></tr>
-        <tr><td>NPM</td><td>: 2531145</td></tr>
-        <tr><td>Status</td><td>: Mahasiswa</td></tr>
-        <tr><td>Umur</td><td>: 20 Tahun</td></tr>
-        <tr><td>Alamat</td><td>: Batam, Indonesia</td></tr>
-        <tr><td>Cita-cita</td><td>: Business Analyst</td></tr>
-        <tr><td>hobi</td><td>: Berenang dan memasak</td></tr>
-    </table>
-
-
-    <audio id="music" src="bergema sampai selamanya.mp3"></audio>
-
- <div class="music-player" id="musicPlayer" style="display:none;">
-    <div class="time">
-        <span id="currentTime">00:00</span> /
-        <span id="duration">00:00</span>
-    </div>
-
-    <input type="range" id="progress" value="0">
-
-    <div class="controls">
-        <button onclick="backward()">⏪ 10s</button>
-        <button onclick="toggleMusic()">▶ / ⏸</button>
-        <button onclick="forward()">10s ⏩</button>
-    </div>
+<div class="buttons">
+    <button onclick="tampilSalam()">Salam</button>
+    <button onclick="ubahMoto()">Ubah Moto</button>
+    <button onclick="toggleDark()">Dark / Light</button>
+    <button onclick="toggleMusic()">▶ Play / ⏸ Musik</button>
 </div>
 
-</div>
-   
-    <div class="buttons">
-        <button onclick="tampilSalam()">Salam</button>
-        <button onclick="ubahMoto()">Ubah Moto</button>
-        <button onclick="toggleDark()">Dark / Light</button>
-        <button onclick="toggleMusic()">▶ Play / ⏸ Musik</button>
-    </div>
+<footer class="footer">
+    <small>© 2026 | Website Biodata Pribadi</small>
+</footer>
 
-    <div class="footer">© 2026 | Website Biodata Pribadi</div>
-</div>
+<!-- HUBUNGKAN JAVASCRIPT -->
+<script src="./script.js"></script>
 
-<script src="script.js"></script>
 </body>
 </html>
