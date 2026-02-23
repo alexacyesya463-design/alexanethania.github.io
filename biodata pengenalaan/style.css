@@ -1,4 +1,4 @@
-/* ================== BODY ================== */
+/* ================= BODY ================= */
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin:0;
@@ -13,10 +13,10 @@ body.dark{
     background: linear-gradient(-45deg,#000,#121212,#1f1f1f,#333);
 }
 
-/* ================== CARD ================== */
+/* ================= CONTAINER ================= */
 .container{
     width:95%;
-    max-width:900px;   /* Dibesarkan supaya foto lega */
+    max-width:1100px;   /* Diperlebar lagi */
     margin:60px auto;
     background:#fff;
     border-radius:20px;
@@ -29,7 +29,7 @@ body.dark .container{
     background:#1e1e1e;
 }
 
-/* ================== TITLE ================== */
+/* ================= TITLE ================= */
 h1{
     text-align:center;
     color:#0a1f44;
@@ -39,21 +39,20 @@ body.dark h1{
     color:#fff;
 }
 
-/* ================== FOTO SUPER BESAR ================== */
+/* ================= FOTO SUPER BESAR ================= */
 .photo{
     text-align:center;
-    margin:50px 0;
+    margin:60px 0;
 }
 
 .photo img{
-    width:80%;              /* Ikut lebar card */
-    max-width:650px;        /* Maksimal besar */
-    height:auto;
-    aspect-ratio:1/1;       /* Tetap bulat sempurna */
+    width:700px;          /* BENAR-BENAR BESAR */
+    max-width:100%;       /* Supaya tidak keluar layar */
+    height:700px;
     border-radius:50%;
     object-fit:cover;
-    border:10px solid #0a1f44;
-    box-shadow:0 25px 70px rgba(0,0,0,.5);
+    border:12px solid #0a1f44;
+    box-shadow:0 30px 80px rgba(0,0,0,.5);
     transition:.4s ease;
 }
 
@@ -61,14 +60,14 @@ body.dark h1{
     transform:scale(1.05);
 }
 
-/* ================== MOTTO ================== */
+/* ================= MOTTO ================= */
 .motto{
     text-align:center;
     font-style:italic;
     margin-bottom:20px;
 }
 
-/* ================== TABLE ================== */
+/* ================= TABLE ================= */
 table{
     width:100%;
     border-collapse:collapse;
@@ -94,7 +93,7 @@ body.dark td:first-child{
     color:#9ecbff;
 }
 
-/* ================== MUSIC PLAYER ================== */
+/* ================= MUSIC PLAYER ================= */
 .music-player{
     margin-top:25px;
     text-align:center;
@@ -110,7 +109,7 @@ body.dark td:first-child{
     margin-bottom:4px;
 }
 
-/* ================== BUTTONS ================== */
+/* ================= BUTTON ================= */
 .controls button,
 button{
     background:#0a1f44;
@@ -133,7 +132,7 @@ button:hover,
     margin-top:25px;
 }
 
-/* ================== FOOTER ================== */
+/* ================= FOOTER ================= */
 .footer{
     text-align:center;
     margin-top:25px;
@@ -141,7 +140,7 @@ button:hover,
     color:#777;
 }
 
-/* ================== ANIMATIONS ================== */
+/* ================= ANIMATION ================= */
 @keyframes gradientBG{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
