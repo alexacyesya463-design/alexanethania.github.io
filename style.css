@@ -127,20 +127,22 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 
 /* PORTFOLIO */
 .portfolio{
-padding:80px 8%;
-text-align:center;
+    padding:80px 8%;
+    text-align:center;
 }
 
-.portfolio-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:5px;
-margin-top:10px;
+.portfolio-single{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
 }
 
-.portfolio-grid img{
-width:100%;
-border-radius:15px;
+.portfolio-single img{
+    width:320px;              /* ukuran lebar */
+    height:500px;             /* tinggi portrait */
+    object-fit:cover;         /* biar tidak gepeng */
+    border-radius:30px;       /* sudut rounded besar */
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* CONTACT */
