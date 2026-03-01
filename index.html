@@ -1,69 +1,152 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Alexa</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Website Personal Alexa">
+<title>Alexa Minimalist Website</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Personal Website</h1>
-    <button id="darkModeBtn">🌙 Mode</button>
+<header class="navbar">
+    <div class="logo">ALEXA</div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 </header>
 
-<section class="hero">
-    <div class="hero-left">
-        <img src="foto.JPEG" alt="Foto Alexa">
-    </div>
-
-    <div class="hero-right">
-        <h2>Halo, Saya Alexa Nethania Cyesya</h2>
+<!-- HERO -->
+<section class="hero" id="home">
+    <article class="hero-text">
+        <h1>Alexa is <span>Minimalist</span></h1>
         <p>
-            Saya adalah mahasiswa aktif Semester 2 dengan minat di bidang 
-            pemrograman dan sistem informasi.
+            Mahasiswa kreatif yang fokus pada desain web modern,
+            clean layout, dan pengalaman pengguna yang nyaman.
         </p>
+        <button class="btn-primary" onclick="scrollToSection('about')">
+            See More
+        </button>
+    </article>
 
-        <blockquote>
-            "Talk is cheap, show me the code."
-        </blockquote>
+    <figure class="hero-image">
+        <img src="hero.jpg" alt="Hero Image">
+    </figure>
+</section>
 
-        <div class="info-grid">
-            <div class="card">
-                <h4>Posisi</h4>
-                <p>Mahasiswa</p>
-            </div>
+<!-- ABOUT -->
+<section class="about" id="about">
+    <h2>Tentang Saya</h2>
 
-            <div class="card">
-                <h4>Semester</h4>
-                <p>Semester 2</p>
-            </div>
+    <div class="about-container">
+        <img src="foto.jpg" alt="Foto Profil">
 
-            <div class="card">
-                <h4>Kewarganegaraan</h4>
-                <p>Indonesia</p>
-            </div>
+        <div class="about-text">
+            <p>
+                Saya adalah mahasiswa Semester <strong>2</strong> yang memiliki
+                minat di bidang <mark>Pemrograman</mark> dan Sistem Informasi.
+            </p>
 
-            <div class="card">
-                <h4>Tanggal Lahir</h4>
-                <p>04 Oktober 2007</p>
-            </div>
+            <blockquote>
+                "Talk is cheap, show me the code."
+            </blockquote>
 
-            <div class="card">
-                <h4>Bahasa</h4>
-                <p>Indonesia - Inggris</p>
-            </div>
+            <div class="info-grid">
 
-            <div class="card">
-                <h4>Website Kampus</h4>
-                <a href="https://www.uib.ac.id" target="_blank">uib.ac.id</a>
+                <div class="card">
+                    <h4>Posisi</h4>
+                    <p>Mahasiswa</p>
+                </div>
+
+                <div class="card">
+                    <h4>Semester</h4>
+                    <p>2</p>
+                </div>
+
+                <div class="card">
+                    <h4>Kewarganegaraan</h4>
+                    <p>Indonesia</p>
+                </div>
+
+                <div class="card">
+                    <h4>Tanggal Lahir</h4>
+                    <time datetime="2007-10-04">04 Oktober 2007</time>
+                </div>
+
+                <div class="card">
+                    <h4>Bahasa</h4>
+                    <ul>
+                        <li>Indonesia</li>
+                        <li>Inggris</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4>Email</h4>
+                    <address>alexa@email.com</address>
+                </div>
+
             </div>
         </div>
     </div>
 </section>
 
-<button id="scrollTopBtn">⬆</button>
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+    <h2>Portfolio</h2>
+
+    <div class="portfolio-grid">
+        <figure>
+            <img src="hero.jpg" alt="">
+            <figcaption>Project Website</figcaption>
+        </figure>
+
+        <figure>
+            <img src="hero.jpg" alt="">
+            <figcaption>UI Design</figcaption>
+        </figure>
+
+        <figure>
+            <img src="hero.jpg" alt="">
+            <figcaption>Mobile App</figcaption>
+        </figure>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+        <fieldset>
+            <legend>Form Kontak</legend>
+
+            <label>Nama</label>
+            <input type="text" required>
+
+            <label>Email</label>
+            <input type="email" required>
+
+            <label>Pesan</label>
+            <textarea rows="4" required></textarea>
+
+            <button type="submit">Kirim</button>
+        </fieldset>
+    </form>
+</section>
+
+<footer>
+    <small>© 2026 Alexa Cyesya | All Rights Reserved</small>
+</footer>
 
 <script src="script.js"></script>
 </body>
