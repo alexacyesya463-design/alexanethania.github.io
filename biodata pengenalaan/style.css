@@ -90,7 +90,8 @@ background:#ec4899;
 }
 
 .hero-image img{
-width:450px;
+width:100%;
+max-width:400px;
 border-radius:20px;
 }
 
@@ -127,22 +128,28 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 
 /* PORTFOLIO */
 .portfolio{
-    padding:80px 8%;
-    text-align:center;
+padding:80px 8%;
+text-align:center;
 }
 
 .portfolio-single{
-    display:flex;
-    justify-content:center;
-    margin-top:20px;
+display:flex;
+justify-content:center;
+margin-top:30px;
 }
 
 .portfolio-single img{
-    width:320px;              /* ukuran lebar */
-    height:500px;             /* tinggi portrait */
-    object-fit:cover;         /* biar tidak gepeng */
-    border-radius:30px;       /* sudut rounded besar */
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+width:100%;
+max-width:320px;       /* Tidak akan besar lagi */
+aspect-ratio:3/4;      /* Portrait proporsional */
+object-fit:cover;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.4s ease;
+}
+
+.portfolio-single img:hover{
+transform:scale(1.05);
 }
 
 /* CONTACT */
@@ -182,6 +189,7 @@ color:white;
 
 /* MOBILE */
 @media(max-width:900px){
+
 .hero{
 flex-direction:column;
 text-align:center;
@@ -195,6 +203,7 @@ top:70px;
 right:0;
 background:white;
 padding:20px;
+border-radius:10px;
 }
 
 .nav-links.active{
@@ -204,4 +213,9 @@ display:flex;
 .menu-toggle{
 display:block;
 }
+
+.portfolio-single img{
+max-width:250px;
+}
+
 }
