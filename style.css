@@ -3,7 +3,6 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Segoe UI',sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
@@ -17,43 +16,24 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
-background:rgba(255,255,255,0.8);
-backdrop-filter:blur(10px);
+background:white;
 position:fixed;
 width:100%;
 top:0;
 z-index:1000;
 }
 
-.logo{
-font-weight:bold;
-color:#2563eb;
-letter-spacing:2px;
-}
-
 .nav-links{
 list-style:none;
 display:flex;
-gap:25px;
+gap:20px;
 }
 
 .nav-links a{
 text-decoration:none;
-color:#444;
-transition:0.3s;
+color:#333;
 }
 
-.nav-links a:hover{
-color:#ec4899;
-}
-
-.menu-toggle{
-display:none;
-font-size:24px;
-cursor:pointer;
-}
-
-/* HERO */
 .hero{
 display:flex;
 align-items:center;
@@ -62,68 +42,25 @@ padding:120px 8% 50px;
 min-height:100vh;
 }
 
-.hero-text{
-max-width:500px;
-}
-
-.hero-text h1{
-font-size:50px;
-margin-bottom:20px;
-}
-
-.hero-text span{
-color:#ec4899;
-}
-
-.btn-primary{
-padding:12px 30px;
-background:#2563eb;
-color:white;
-border:none;
-border-radius:30px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.btn-primary:hover{
-background:#ec4899;
-}
-
 .hero-image img{
-width:100%;
-max-width:400px;
+max-width:350px;
 border-radius:20px;
 }
 
-/* ABOUT */
 .about{
 padding:80px 8%;
 }
 
 .about-container{
 display:flex;
-gap:40px;
+gap:30px;
 align-items:center;
 flex-wrap:wrap;
 }
 
 .about-container img{
-width:250px;
+width:200px;
 border-radius:20px;
-}
-
-.info-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:15px;
-margin-top:20px;
-}
-
-.card{
-background:white;
-padding:15px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* PORTFOLIO */
@@ -139,17 +76,17 @@ margin-top:30px;
 }
 
 .portfolio-single img{
-width:100%;
-max-width:320px;       /* Tidak akan besar lagi */
-aspect-ratio:3/4;      /* Portrait proporsional */
+width:180px;      /* KECIL */
+height:250px;     /* KECIL */
 object-fit:cover;
-border-radius:30px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-transition:0.4s ease;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
-.portfolio-single img:hover{
-transform:scale(1.05);
+.portfolio-caption{
+margin-top:10px;
+font-size:14px;
+color:#666;
 }
 
 /* CONTACT */
@@ -158,20 +95,21 @@ padding:80px 8%;
 }
 
 form{
-max-width:500px;
+max-width:400px;
 margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
-input,textarea{
-width:100%;
+input, textarea{
 padding:10px;
-margin-bottom:15px;
-border-radius:10px;
+border-radius:8px;
 border:1px solid #ccc;
 }
 
 button{
-padding:10px 20px;
+padding:10px;
 border:none;
 border-radius:20px;
 background:#ec4899;
@@ -179,7 +117,6 @@ color:white;
 cursor:pointer;
 }
 
-/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
@@ -195,26 +132,7 @@ flex-direction:column;
 text-align:center;
 }
 
-.nav-links{
-display:none;
-flex-direction:column;
-position:absolute;
-top:70px;
-right:0;
-background:white;
-padding:20px;
-border-radius:10px;
-}
-
-.nav-links.active{
-display:flex;
-}
-
-.menu-toggle{
-display:block;
-}
-
-.portfolio-single img{
+.hero-image img{
 max-width:250px;
 }
 
