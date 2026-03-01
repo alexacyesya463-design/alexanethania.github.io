@@ -3,86 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Alexa Nethania Cyesya">
-    <title>Biodata Diri</title>
-
-    <!-- HUBUNGKAN CSS -->
-    <link rel="stylesheet" href="./style.css">
+    <title>Biodata Alexa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-    <h1>Biodata Pribadi</h1>
+    <h1>Personal Website</h1>
+    <button id="darkModeBtn">🌙 Mode</button>
 </header>
 
-<hr>
+<section class="hero">
+    <div class="hero-left">
+        <img src="foto.jpg" alt="Foto Alexa">
+    </div>
 
-<div class="container">
+    <div class="hero-right">
+        <h2>Halo, Saya Alexa Nethania Cyesya</h2>
+        <p>
+            Saya adalah mahasiswa aktif Semester 2 dengan minat di bidang 
+            pemrograman dan sistem informasi.
+        </p>
 
-    <figure class="photo">
-        <img src="./foto.JPEG" alt="Foto Profil">
-    </figure>
+        <blockquote>
+            "Talk is cheap, show me the code."
+        </blockquote>
 
-    <section>
-        <div class="motto" id="motto">
-            "Terus belajar, berkembang, dan pantang menyerah."
+        <div class="info-grid">
+            <div class="card">
+                <h4>Posisi</h4>
+                <p>Mahasiswa</p>
+            </div>
+
+            <div class="card">
+                <h4>Semester</h4>
+                <p>Semester 2</p>
+            </div>
+
+            <div class="card">
+                <h4>Kewarganegaraan</h4>
+                <p>Indonesia</p>
+            </div>
+
+            <div class="card">
+                <h4>Tanggal Lahir</h4>
+                <p>04 Oktober 2007</p>
+            </div>
+
+            <div class="card">
+                <h4>Bahasa</h4>
+                <p>Indonesia - Inggris</p>
+            </div>
+
+            <div class="card">
+                <h4>Website Kampus</h4>
+                <a href="https://www.uib.ac.id" target="_blank">uib.ac.id</a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section>
-        <h2>Data Diri</h2>
-        <table>
-            <tr><td>Nama</td><td>: Alexa Nethania Cyesya</td></tr>
-            <tr><td>Prodi</td><td>: Sistem Informasi</td></tr>
-            <tr><td>NPM</td><td>: 2531145</td></tr>
-            <tr><td>Status</td><td>: Mahasiswa</td></tr>
-            <tr><td>Umur</td><td>: 20 Tahun</td></tr>
-            <tr><td>Alamat</td><td>: Batam, Indonesia</td></tr>
-            <tr><td>Cita-cita</td><td>: Business Analyst</td></tr>
-            <tr><td>Hobi</td><td>: Berenang dan Memasak</td></tr>
-        </table>
-    </section>
+<button id="scrollTopBtn">⬆</button>
 
-    <details>
-        <summary>Klik untuk melihat deskripsi diri</summary>
-        <p>Saya adalah mahasiswa Sistem Informasi yang tertarik pada bidang Business Analyst dan pengembangan teknologi digital.</p>
-    </details>
-
-    <section class="music-player" id="musicPlayer" style="display:none;">
-        <h3>Music Player 🎵</h3>
-
-        <audio id="music" src="./bergema sampai selamanya.mp3"></audio>
-
-        <div class="time">
-            <span id="currentTime">00:00</span> /
-            <span id="duration">00:00</span>
-        </div>
-
-        <input type="range" id="progress" value="0">
-
-        <div class="controls">
-            <button onclick="backward()">⏪ 10s</button>
-            <button onclick="toggleMusic()">▶ / ⏸</button>
-            <button onclick="forward()">10s ⏩</button>
-        </div>
-    </section>
-
-</div>
-
-<div class="buttons">
-    <button onclick="tampilSalam()">Salam</button>
-    <button onclick="ubahMoto()">Ubah Moto</button>
-    <button onclick="toggleDark()">Dark / Light</button>
-    <button onclick="toggleMusic()">▶ Play / ⏸ Musik</button>
-</div>
-
-<footer class="footer">
-    <small>© 2026 | Website Biodata Pribadi</small>
-</footer>
-
-<!-- HUBUNGKAN JAVASCRIPT -->
-<script src="./script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>

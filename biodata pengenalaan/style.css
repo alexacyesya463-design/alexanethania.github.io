@@ -1,88 +1,127 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Alexa Nethania Cyesya">
-    <title>Biodata Diri</title>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-    <!-- HUBUNGKAN CSS -->
-    <link rel="stylesheet" href="./style.css">
-</head>
+body {
+    background: linear-gradient(135deg, #dbeafe, #fbcfe8);
+    color: #333;
+}
 
-<body>
+header {
+    background: #bae6fd;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-<header>
-    <h1>Biodata Pribadi</h1>
-</header>
+header h1 {
+    color: #2563eb;
+}
 
-<hr>
+header button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background: #f9a8d4;
+    cursor: pointer;
+}
 
-<div class="container">
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 40px;
+}
 
-    <figure class="photo">
-        <img src="./foto.JPEG" alt="Foto Profil">
-    </figure>
+.hero-left img {
+    width: 320px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
 
-    <section>
-        <div class="motto" id="motto">
-            "Terus belajar, berkembang, dan pantang menyerah."
-        </div>
-    </section>
+.hero-right {
+    max-width: 600px;
+}
 
-    <section>
-        <h2>Data Diri</h2>
-        <table>
-            <tr><td>Nama</td><td>: Alexa Nethania Cyesya</td></tr>
-            <tr><td>Prodi</td><td>: Sistem Informasi</td></tr>
-            <tr><td>NPM</td><td>: 2531145</td></tr>
-            <tr><td>Status</td><td>: Mahasiswa</td></tr>
-            <tr><td>Umur</td><td>: 20 Tahun</td></tr>
-            <tr><td>Alamat</td><td>: Batam, Indonesia</td></tr>
-            <tr><td>Cita-cita</td><td>: Business Analyst</td></tr>
-            <tr><td>Hobi</td><td>: Berenang dan Memasak</td></tr>
-        </table>
-    </section>
+.hero-right h2 {
+    color: #2563eb;
+    margin-bottom: 15px;
+}
 
-    <details>
-        <summary>Klik untuk melihat deskripsi diri</summary>
-        <p>Saya adalah mahasiswa Sistem Informasi yang tertarik pada bidang Business Analyst dan pengembangan teknologi digital.</p>
-    </details>
+.hero-right p {
+    margin-bottom: 15px;
+}
 
-    <section class="music-player" id="musicPlayer" style="display:none;">
-        <h3>Music Player 🎵</h3>
+blockquote {
+    background: #e0f2fe;
+    padding: 15px;
+    border-left: 5px solid #f472b6;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
 
-        <audio id="music" src="./bergema sampai selamanya.mp3"></audio>
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
 
-        <div class="time">
-            <span id="currentTime">00:00</span> /
-            <span id="duration">00:00</span>
-        </div>
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-        <input type="range" id="progress" value="0">
+.card h4 {
+    color: #ec4899;
+    margin-bottom: 5px;
+}
 
-        <div class="controls">
-            <button onclick="backward()">⏪ 10s</button>
-            <button onclick="toggleMusic()">▶ / ⏸</button>
-            <button onclick="forward()">10s ⏩</button>
-        </div>
-    </section>
+.card a {
+    text-decoration: none;
+    color: #2563eb;
+}
 
-</div>
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #f472b6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
-<div class="buttons">
-    <button onclick="tampilSalam()">Salam</button>
-    <button onclick="ubahMoto()">Ubah Moto</button>
-    <button onclick="toggleDark()">Dark / Light</button>
-    <button onclick="toggleMusic()">▶ Play / ⏸ Musik</button>
-</div>
+/* Dark Mode */
+.dark {
+    background: #1e293b;
+    color: white;
+}
 
-<footer class="footer">
-    <small>© 2026 | Website Biodata Pribadi</small>
-</footer>
+.dark .card {
+    background: #334155;
+}
 
-<!-- HUBUNGKAN JAVASCRIPT -->
-<script src="./script.js"></script>
+.dark blockquote {
+    background: #475569;
+}
 
-</body>
-</html>
+/* Responsive */
+@media(max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left img {
+        width: 220px;
+    }
+}
