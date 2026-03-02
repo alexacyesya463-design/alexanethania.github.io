@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alexa Nethania Cyesya</title>
+<meta name="description" content="Website Personal Alexa">
+<title>Alexa NETHANIA CYESYA</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,18 +27,21 @@
 
 <!-- HERO -->
 <section class="hero" id="home">
-    <div class="hero-text">
-        <h1>Alexa <span>Nethania Cyesya</span></h1>
+    <article class="hero-text">
+        <h1>Alexa  <span>Nethania Cyesya</span></h1>
         <p>
-            Mahasiswa Sistem Informasi Universitas Internasional Batam
-            yang berkomitmen untuk terus belajar dan berkembang.
+           Saya merupakan mahasiswa Universitas Internasional Batam, 
+           Program Studi Sistem Informasi semester 2, yang berkomitmen untuk terus bertumbuh,
+           belajar, dan memberikan hasil terbaik dalam setiap kesempatan.
         </p>
-        <button class="btn-primary">See More</button>
-    </div>
+        <button class="btn-primary" onclick="scrollToSection('about')">
+            See More
+        </button>
+    </article>
 
-    <div class="hero-image">
-        <img src="foto.JPEG" alt="Foto Alexa">
-    </div>
+    <figure class="hero-image">
+        <img src="foto.JPEG" alt="Hero Image">
+    </figure>
 </section>
 
 <!-- ABOUT -->
@@ -48,7 +52,47 @@
         <img src="foto.JPEG" alt="Foto Profil">
 
         <div class="about-text">
-            <p><b>"Hari ini mungkin sulit, tapi besok bisa lebih baik."</b></p>
+            <p>
+                "Hari ini mungkin sulit, tapi besok bisa lebih baik</mark> 
+            </p>
+
+            <div class="info-grid">
+
+                <div class="card">
+                    <h4>Nama</h4>
+                    <p>Alexa Nethania Cyesya</p>
+                </div>
+
+               <div class="card">
+                    <h4>Tanggal Lahir</h4>
+                    <time datetime="2005-10-21">21 Oktober 2005</time>
+                </div>
+
+                <div class="card">
+                    <h4>Alamat</h4>
+                    <p>Batam, Kepulauan Riau</p>
+                </div>
+
+                <div class="card">
+                    <h4>Pendidikan</h4>
+                    <p>1. sdn 002 kota negri Batam
+                       2. smpn 56 kota negri batan
+                       3. sman 4 negri kota batam
+                       4. mahasiswa UIB
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h4>Program studi</h4>
+                    <p>sistem informasi</p>
+                </div>
+
+                <div class="card">
+                    <h4>Email</h4>
+                    <address>alexanethania00@email.com</address>
+                </div>
+
+            </div>
         </div>
     </div>
 </section>
@@ -57,28 +101,19 @@
 <section class="portfolio" id="portfolio">
     <h2>Portfolio</h2>
 
-    <div class="portfolio-single">
-        <img src="poster.kampus.jpg.jpeg" alt="Project Poster">
+    <div class="portfolio-grid">
+        <figure>
+            <img src="poster.kampus.jpg.jpeg" alt="">
+            <figcaption>Project poster</figcaption>
+        </figure>
+
     </div>
-
-    <p class="portfolio-caption">Project Poster Kampus Stage</p>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-    <h2>Contact Me</h2>
-
-    <form>
-        <input type="text" placeholder="Nama" required>
-        <input type="email" placeholder="Email" required>
-        <textarea rows="4" placeholder="Pesan" required></textarea>
-        <button type="submit">Kirim</button>
-    </form>
 </section>
 
 <footer>
-    © 2026 Alexa Cyesya | All Rights Reserved
+    <small>© 2026 Alexa Cyesya | All Rights Reserved</small>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
