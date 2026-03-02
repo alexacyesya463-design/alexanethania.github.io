@@ -102,11 +102,18 @@ border-radius:20px;
 padding:80px 8%;
 }
 
-.about-container{
-display:flex;
-gap:40px;
-align-items:center;
-flex-wrap:wrap;
+.about-container {
+    display: flex;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;   /* Ini bikin bagian kanan melebar */
+}
+
+.profile-table {
+    width: 100%;   /* Tabel jadi penuh */
+    border-collapse: collapse;
 }
 
 /* PROFILE TABLE */
