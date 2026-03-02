@@ -3,6 +3,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -16,11 +17,18 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
-background:white;
+background:rgba(255,255,255,0.8);
+backdrop-filter:blur(10px);
 position:fixed;
 width:100%;
 top:0;
 z-index:1000;
+}
+
+.logo{
+font-weight:bold;
+color:#2563eb;
+letter-spacing:2px;
 }
 
 .nav-links{
@@ -33,7 +41,17 @@ gap:20px;
 text-decoration:none;
 color:#333;
 }
+ .nav-links a:hover{
+color:#ec4899;
+}
 
+.menu-toggle{
+display:none;
+font-size:24px;
+cursor:pointer;
+}
+
+/* HERO */
 .hero{
 display:flex;
 align-items:center;
@@ -196,34 +214,6 @@ box-shadow:0 5px 15px rgba(0,0,0,0.2);
 margin-top:10px;
 font-size:14px;
 color:#666;
-}
-
-/* CONTACT */
-.contact{
-padding:80px 8%;
-}
-
-form{
-max-width:400px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-input, textarea{
-padding:10px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-button{
-padding:10px;
-border:none;
-border-radius:20px;
-background:#ec4899;
-color:white;
-cursor:pointer;
 }
 
 footer{
