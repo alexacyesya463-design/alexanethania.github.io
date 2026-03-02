@@ -99,7 +99,7 @@ border-radius:20px;
 
 /* ABOUT */
 .about{
-padding:80px 8%;
+padding:100px 10%;
 }
 
 .about-container {
@@ -114,6 +114,13 @@ padding:80px 8%;
 .profile-table {
     width: 100%;   /* Tabel jadi penuh */
     border-collapse: collapse;
+}
+.profile-table th {
+    width: 35%;
+}
+
+.profile-table td {
+    width: 65%;
 }
 
 /* PROFILE TABLE */
