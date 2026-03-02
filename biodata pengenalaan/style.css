@@ -7,8 +7,8 @@ scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#ffffff,#ffffff);
-color:#333;
+background:linear-gradient(135deg,#ffffff,#f596d2);
+color:#1b2060;
 }
 
 /* NAVBAR */
@@ -152,7 +152,7 @@ background:#f9fafb;
 
 /* PORTFOLIO */
 .portfolio{
-padding:80px 8%;
+padding:100px 10%;
 text-align:center;
 }
 
