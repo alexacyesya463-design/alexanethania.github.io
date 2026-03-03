@@ -7,11 +7,11 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#ffffff;
+background:linear-gradient(135deg,#ffffff,#ffffff);
 color:#333;
 }
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 .navbar{
 display:flex;
 justify-content:space-between;
@@ -53,7 +53,7 @@ font-size:24px;
 cursor:pointer;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero{
 display:flex;
 align-items:center;
@@ -89,31 +89,41 @@ transition:0.3s;
 background:#ec4899;
 }
 
-/* FOTO TETAP 420px (TIDAK DIUBAH) */
 .hero-image img,
 .about-container img{
 width:420px;
-height:auto;
+height: auto;
 object-fit:cover;
 border-radius:20px;
 }
 
-/* ================= ABOUT ================= */
+/* ABOUT */
 .about{
 padding:100px 10%;
 }
 
-.about-container{
-display:flex;
-gap:40px;
-align-items:flex-start;
+.about-container {
+    display: flex;
+    gap: 40px;
 }
 
-.about-text{
-flex:1;
+.about-text {
+    flex: 1;   /* Ini bikin bagian kanan melebar */
 }
 
-/* ================= PROFILE TABLE ================= */
+.profile-table {
+    width: 100%;   /* Tabel jadi penuh */
+    border-collapse: collapse;
+}
+.profile-table th {
+    width: 35%;
+}
+
+.profile-table td {
+    width: 65%;
+}
+
+/* PROFILE TABLE */
 .profile-table{
 width:100%;
 max-width:600px;
@@ -135,12 +145,21 @@ background:#2563eb;
 color:white;
 width:35%;
 }
+.portfolio-table img {
+    width: 150px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.portfolio-table img:hover {
+    transform: scale(1.08);
+}
 
 .profile-table tr:nth-child(even){
 background:#f9fafb;
 }
 
-/* ================= PORTFOLIO ================= */
+/* PORTFOLIO */
 .portfolio{
 padding:100px 10%;
 text-align:center;
@@ -172,78 +191,9 @@ width:140px;
 height:180px;
 object-fit:cover;
 border-radius:12px;
-transition:0.3s;
 }
 
-.portfolio-table img:hover{
-transform:scale(1.08);
-}
-
-/* ================= SKILLS ================= */
-.skills{
-padding:80px 10%;
-text-align:center;
-}
-
-.skills-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-max-width:900px;
-margin:auto;
-}
-
-.skill-card{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.skill-card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 30px rgba(0,0,0,0.15);
-}
-
-/* ================= CONTACT ================= */
-.contact{
-text-align:center;
-padding:80px 10%;
-background:#ffffff;
-}
-
-.contact h2{
-margin-bottom:30px;
-}
-
-.contact-card{
-background:rgba(255, 202, 237, 0.95);
-max-width:500px;
-margin:auto;
-padding:40px; /* hanya dirapikan supaya tidak terlalu besar */
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.contact-card p{
-margin-top:15px;
-font-weight:bold;
-}
-
-.contact-card a{
-display:block;
-margin-top:8px;
-text-decoration:none;
-color:#3366cc;
-transition:0.3s;
-}
-
-.contact-card a:hover{
-color:#1e3c72;
-}
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer{
 width:100%;
 height:70px;
@@ -255,7 +205,10 @@ color:white;
 font-size:14px;
 letter-spacing:1px;
 margin-top:50px;
-}
+} 
+
+
+
 
 /* ================= RESPONSIVE ================= */
 @media(max-width:900px){
@@ -304,4 +257,69 @@ height:60px;
 font-size:12px;
 }
 
+}
+ 
+/* ================= SKILLS ================= */
+.skills{
+padding:80px 10%;
+text-align:center;
+}
+
+.skills-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+max-width:900px;
+margin:auto;
+}
+
+.skill-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.skill-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+    padding: 50px 20px;   /* kecilkan padding */
+    background: #ffffff;
+}
+    
+.contact h2 {
+    margin-bottom: 30px;
+}
+
+.contact-card {
+    background: rgb(255, 202, 237, 0.95);
+    max-width: 500px;
+    margin: auto;
+    padding: 100px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-card p {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.contact-card a {
+    display: block;
+    margin-top: 8px;
+    text-decoration: none;
+    color: #3366cc;
+    transition: 0.5s;
+}
+
+.contact-card a:hover {
+    color: #1e3c72;
 }
