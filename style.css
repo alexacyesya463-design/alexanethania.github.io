@@ -199,7 +199,6 @@ margin-top:50px;
 } 
  
 
-
 /* RESPONSIVE */
 @media(max-width:900px){
 
@@ -251,12 +250,12 @@ height:60px;
 font-size:12px;
 }
 
-} 
+}
 /* CONTACT */
 
 .contact {
     text-align: center;
-    padding: 30% 20px;
+    padding: 100px 30px;
     background: #f5f6fa;
 }
 
@@ -265,10 +264,10 @@ font-size:12px;
 }
 
 .contact-card {
-    background: rgb(255, 144, 218, 0.95);
+    background: white;
     max-width: 500px;
     margin: auto;
-    padding: 100px;
+    padding: 30px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
