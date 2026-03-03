@@ -3,254 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Website Personal Alexa">
 <title>Alexa Nethania Cyesya</title>
-
-<style>
-
-/* ===== RESET ===== */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#fdf6f9;
-color:#333;
-}
-
-/* ===== NAVBAR ===== */
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 50px;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.logo{
-font-weight:bold;
-color:hotpink;
-}
-
-.nav-links{
-display:flex;
-list-style:none;
-gap:20px;
-}
-
-.nav-links a{
-text-decoration:none;
-color:#333;
-font-weight:500;
-transition:0.3s;
-}
-
-.nav-links a:hover{
-color:hotpink;
-}
-
-/* ===== HERO ===== */
-.hero{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:80px 50px;
-flex-wrap:wrap;
-}
-
-.hero-text{
-max-width:500px;
-}
-
-.hero-text h1 span{
-color:hotpink;
-}
-
-.btn-primary{
-margin-top:20px;
-padding:10px 20px;
-background:hotpink;
-color:white;
-border:none;
-border-radius:8px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.btn-primary:hover{
-background:deeppink;
-}
-
-.hero-image img{
-width:300px;
-border-radius:20px;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* ===== SECTION ===== */
-section{
-padding:70px 50px;
-}
-
-h2{
-text-align:center;
-margin-bottom:40px;
-color:hotpink;
-}
-
-/* ===== ABOUT ===== */
-.about-container{
-display:flex;
-gap:40px;
-flex-wrap:wrap;
-align-items:center;
-}
-
-.about-container img{
-width:250px;
-border-radius:15px;
-}
-
-.profile-table{
-border-collapse:collapse;
-}
-
-.profile-table th{
-text-align:left;
-padding:5px 15px 5px 0;
-}
-
-.profile-table td{
-padding:5px 0;
-}
-
-/* ===== PORTFOLIO ===== */
-.portfolio-container{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.portfolio-card{
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
-text-align:center;
-width:280px;
-transition:0.3s;
-}
-
-.portfolio-card:hover{
-transform:translateY(-10px);
-}
-
-.portfolio-card img{
-width:100%;
-border-radius:10px;
-}
-
-.btn-detail{
-display:inline-block;
-margin-top:10px;
-padding:8px 15px;
-background:hotpink;
-color:white;
-text-decoration:none;
-border-radius:8px;
-}
-
-/* ===== SKILLS ===== */
-.skills-container{
-max-width:600px;
-margin:auto;
-}
-
-.skill-box{
-margin-bottom:20px;
-}
-
-.progress{
-background:#eee;
-height:10px;
-border-radius:10px;
-overflow:hidden;
-}
-
-.progress-bar{
-height:100%;
-background:linear-gradient(90deg, pink, hotpink);
-border-radius:10px;
-}
-
-/* ===== CONTACT ===== */
-.contact-card{
-text-align:center;
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
-max-width:400px;
-margin:auto;
-}
-
-.contact-card a{
-display:block;
-margin-bottom:15px;
-color:hotpink;
-text-decoration:none;
-}
-
-/* ===== FOOTER ===== */
-footer{
-text-align:center;
-padding:20px;
-background:white;
-margin-top:40px;
-}
-
-@media(max-width:768px){
-.hero{
-flex-direction:column;
-text-align:center;
-}
-.about-container{
-flex-direction:column;
-}
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="navbar">
 <div class="logo">ALEXA NETHANIA CYESYA</div>
+
+<nav>
 <ul class="nav-links">
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#portfolio">Portfolio</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#contact">contact</a></li>
 </ul>
+</nav>
+
+<div class="menu-toggle" id="menu-toggle">☰</div>
 </header>
 
 <section class="hero" id="home">
 <div class="hero-text">
-<h1>Alexa <span>Nethania Cyesya</span></h1>
+<h1>Alexa  <span>Nethania Cyesya</span></h1>
 <p>
-Mahasiswa Universitas Internasional Batam,
+Saya merupakan mahasiswa Universitas Internasional Batam,
 Program Studi Sistem Informasi semester 2.
 </p>
-<a href="#about"><button class="btn-primary">See More</button></a>
+<button class="btn-primary" onclick="scrollToSection('about')">
+See More
+</button>
 </div>
 
 <div class="hero-image">
@@ -258,69 +42,160 @@ Program Studi Sistem Informasi semester 2.
 </div>
 </section>
 
-<section id="about">
+<section class="about" id="about">
 <h2>Tentang Saya</h2>
+
 <div class="about-container">
 <img src="foto.JPEG" alt="Foto Profil">
+
+<div class="about-text">
+<p>"Hari ini mungkin sulit, tapi besok bisa lebih baik"</p>
+
+
+
 <table class="profile-table">
-<tr><th>Nama</th><td>Alexa Nethania Cyesya</td></tr>
-<tr><th>Program Studi</th><td>Sistem Informasi</td></tr>
-<tr><th>NPM</th><td>2531145</td></tr>
-<tr><th>Tanggal Lahir</th><td>21 Oktober 2005</td></tr>
-<tr><th>Alamat</th><td>Batam, Kepulauan Riau</td></tr>
-<tr><th>Hobi</th><td>Berenang & Memasak</td></tr>
-<tr><th>Cita-cita</th><td>Business Analyst</td></tr>
-<tr><th>Email</th><td>alexanethania00@email.com</td></tr>
+<tr>
+<th>Nama</th>
+<td>Alexa Nethania Cyesya</td>
+</tr>
+<tr>
+<th>Program Studi</th>
+<td>Sistem Informasi</td>
+</tr>
+<tr>
+<th>NPM</th>
+<td>2531145</td>
+</tr>
+<tr>
+<th>Tanggal Lahir</th>
+<td>21 Oktober 2005</td>
+</tr>
+<tr>
+<th>Alamat</th>
+<td>Batam, Kepulauan Riau</td>
+</tr>
+<tr>
+<th>Hobi</th>
+<td>berenang & memasak</td>
+</tr>
+
+<tr>
+<th>Makanan Favorit</th>
+<td>Nasi goreng & mie ayam</td>
+</tr>
+
+<tr>
+<th>Warna Favorit</th>
+<td>pink dan navy</td>
+</tr>
+
+<tr>
+<th>Cita-cita</th>
+<td>Business Analyst</td>
+</tr>
+<tr>
+<tr>
+<th>Jenjang pendidikan</th>
+<td>- sd 002 negri kota Batam
+    - smp 56 negri kota batam
+    - sma 4 negri kita batam
+    - Universitas Internasional batam<td>
+</tr>
+<tr>
+<th>Email</th>
+<td>alexanethania00@email.com</td>
+</tr>
 </table>
+
+</div>
 </div>
 </section>
 
-<section id="portfolio">
+<section class="portfolio" id="portfolio">
 <h2>Portfolio</h2>
-<div class="portfolio-container">
-<div class="portfolio-card">
-<img src="poster.kampus.jpg.jpeg" alt="Project">
-<h3>UI Design Kampus</h3>
-<p>Design</p>
+
+<table class="portfolio-table">
+<tr>
+<th>Nama Project</th>
+<th>Jenis</th>
+<th>Preview</th>
+</tr>
+<tr>
+<td>UI Design Kampus</td>
+<td>Design</td>
+<td>
+<td>
+<img src="poster.kampus.jpg.jpeg" alt="Project"><br><br>
 <a href="#" class="btn-detail">Lihat Detail</a>
-</div>
-</div>
-</section>
+</td>
+</td>
+</tr>
 
-<section id="skills">
+<section class="skills" id="skills">
 <h2>My Skills</h2>
+
 <div class="skills-container">
-<div class="skill-box">
+
+<div class="skill-card">
+<h3>HTML</h3>
+<p>Struktur website</p>
+</div>
+
+<div class="skill-card">
+<h3>CSS</h3>
+<p>Styling & Layout</p>
+</div>
+
+<div class="skill-card">
+<h3>UI/UX</h3>
+<p>Design Interface</p>
+</div>
+
+<div class="skill-card">
+<h3>Canva</h3>
+<p>Poster & Design</p>
+</div>
+
+<div class="skill">
 <p>HTML</p>
-<div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+<div class="progress">
+<div class="progress-bar html"></div>
 </div>
-<div class="skill-box">
-<p>CSS</p>
-<div class="progress"><div class="progress-bar" style="width:85%"></div></div>
 </div>
-<div class="skill-box">
-<p>UI/UX</p>
-<div class="progress"><div class="progress-bar" style="width:80%"></div></div>
-</div>
-<div class="skill-box">
-<p>Canva</p>
-<div class="progress"><div class="progress-bar" style="width:95%"></div></div>
-</div>
+
 </div>
 </section>
 
-<section id="contact">
+<section class="contact">
 <h2>Contact Me</h2>
+<section class="contact" id="contact"></section>
 <div class="contact-card">
-<a href="mailto:alexanethania00@email.com">📧 Email</a>
-<a href="https://instagram.com/alexanthaniaa" target="_blank">📱 Instagram</a>
-<a href="https://github.com/alexacyesya463-design" target="_blank">💻 GitHub</a>
+    
+    <p>📧 Email</p>
+    <a href="mailto:alexanethania00@email.com">
+        alexanethania00@email.com
+    </a>
+
+    <p>📱 Instagram</p>
+    <a href="https://instagram.com/alexanthaniaa" target="_blank">
+        @alexanthaniaa
+    </a>
+
+    <p>💻 GitHub</p>
+    <a href="https://github.com/alexacyesya463-design" target="_blank">
+        github.com/alexacyesya463-design
+    </a>
+
 </div>
+</section>
+
+</table>
 </section>
 
 <footer>
 <small>© 2026 Alexa Cyesya | All Rights Reserved</small>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
