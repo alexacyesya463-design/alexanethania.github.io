@@ -256,10 +256,9 @@ font-size:12px;
 
 .contact {
     text-align: center;
-    padding: 100% 30px;
-    background: #f5f6fa;
+    padding: 50px 20px;   /* kecilkan padding */
 }
-
+    
 .contact h2 {
     margin-bottom: 30px;
 }
