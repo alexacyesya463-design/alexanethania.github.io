@@ -260,31 +260,35 @@ font-size:12px;
 }
  
 /* ================= SKILLS ================= */
-.skills{
-padding:80px 10%;
-text-align:center;
+.skill{
+margin:20px auto;
+max-width:600px;
+text-align:left;
 }
 
-.skills-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-max-width:900px;
-margin:auto;
-}
-
-.skill-card{
-background:white;
-padding:30px;
+.progress{
+background:#eee;
+height:12px;
 border-radius:20px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-transition:0.3s;
+overflow:hidden;
+margin-top:8px;
 }
 
-.skill-card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 30px rgba(0,0,0,0.15);
+.progress-bar{
+height:100%;
+background:#ff69b4;
+border-radius:20px;
 }
+.html { width:85%; }
+.css { width:80%; }
+.uiux { width:75%; }
+.canva { width:90%; }
+
+/* Ukuran kemampuan */
+.html{ width:85%; }
+.css{ width:80%; }
+.uiux{ width:75%; }
+.canva{ width:90%; }
 
 /* CONTACT */
 
