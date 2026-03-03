@@ -145,6 +145,15 @@ background:#2563eb;
 color:white;
 width:35%;
 }
+.portfolio-table img {
+    width: 150px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.portfolio-table img:hover {
+    transform: scale(1.08);
+}
 
 .profile-table tr:nth-child(even){
 background:#f9fafb;
