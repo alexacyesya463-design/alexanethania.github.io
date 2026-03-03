@@ -257,6 +257,7 @@ font-size:12px;
 .contact {
     text-align: center;
     padding: 50px 20px;   /* kecilkan padding */
+    background: #ffffff;
 }
     
 .contact h2 {
@@ -264,7 +265,7 @@ font-size:12px;
 }
 
 .contact-card {
-    background: rgb(255, 144, 218, 0.95);
+    background: rgb(255, 202, 237, 0.95);
     max-width: 500px;
     margin: auto;
     padding: 100px;
@@ -279,10 +280,10 @@ font-size:12px;
 
 .contact-card a {
     display: block;
-    margin-top: 5px;
+    margin-top: 8px;
     text-decoration: none;
     color: #3366cc;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .contact-card a:hover {
