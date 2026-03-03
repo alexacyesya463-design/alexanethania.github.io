@@ -89,6 +89,7 @@ transition:0.3s;
 background:#ec4899;
 }
 
+/* FOTO TETAP 420px (TIDAK DIUBAH) */
 .hero-image img,
 .about-container img{
 width:420px;
@@ -105,13 +106,14 @@ padding:100px 10%;
 .about-container{
 display:flex;
 gap:40px;
+align-items:flex-start;
 }
 
 .about-text{
 flex:1;
 }
 
-/* PROFILE TABLE */
+/* ================= PROFILE TABLE ================= */
 .profile-table{
 width:100%;
 max-width:600px;
@@ -183,10 +185,6 @@ padding:80px 10%;
 text-align:center;
 }
 
-.skills h2{
-margin-bottom:40px;
-}
-
 .skills-container{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -208,20 +206,6 @@ transform:translateY(-8px);
 box-shadow:0 15px 30px rgba(0,0,0,0.15);
 }
 
-.progress{
-background:#eee;
-height:10px;
-border-radius:20px;
-overflow:hidden;
-margin-top:10px;
-}
-
-.progress-bar{
-height:100%;
-background:#ff69b4;
-border-radius:20px;
-}
-
 /* ================= CONTACT ================= */
 .contact{
 text-align:center;
@@ -237,7 +221,7 @@ margin-bottom:30px;
 background:rgba(255, 202, 237, 0.95);
 max-width:500px;
 margin:auto;
-padding:40px; /* diperbaiki supaya tidak terlalu besar */
+padding:40px; /* hanya dirapikan supaya tidak terlalu besar */
 border-radius:20px;
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
@@ -279,11 +263,6 @@ margin-top:50px;
 .hero{
 flex-direction:column;
 text-align:center;
-}
-
-.hero-image img{
-margin-top:20px;
-width:280px;
 }
 
 .about-container{
