@@ -181,33 +181,7 @@
 <footer>
     <small>© 2026 Alexa Cyesya | All Rights Reserved</small>
 </footer>
-</main> <aside> </aside>
-</div> <footer>
-    <small>© 2026 Alexa Cyesya | All Rights Reserved</small>
-</footer>
 
-<script>
-document.addEventListener('mousemove', function(e) {
-    let body = document.querySelector('body');
-    let heart = document.createElement('span');
-    heart.className = 'cursor-heart'; // Kita kasih class biar CSS-nya nggak tabrakan
-    
-    let x = e.pageX;
-    let y = e.pageY;
-    heart.style.left = x + 'px';
-    heart.style.top = y + 'px';
-
-    let size = Math.random() * 15; // Ukuran hati kecil-kecil biar lucu
-    heart.style.width = 5 + size + 'px';
-    heart.style.height = 5 + size + 'px';
-
-    body.appendChild(heart);
-
-    setTimeout(function() {
-        heart.remove();
-    }, 1000);
-});
-</script>
 
 </body>
 </html>
