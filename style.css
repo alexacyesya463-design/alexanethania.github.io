@@ -219,3 +219,20 @@ footer{
     .hero, .about-container { flex-direction: column; text-align: center; }
     .hero-text h1 { font-size: 28px; }
 }
+.heart{
+position: fixed;
+font-size:20px;
+pointer-events:none;
+animation: float 1s linear forwards;
+}
+
+@keyframes float{
+0%{
+transform: translateY(0) scale(1);
+opacity:1;
+}
+100%{
+transform: translateY(-40px) scale(1.5);
+opacity:0;
+}
+}
