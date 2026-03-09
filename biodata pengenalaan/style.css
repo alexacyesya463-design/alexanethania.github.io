@@ -298,3 +298,37 @@ font-size:12px;
 .contact-card a:hover {
     color: #1e3c72;
 }
+/* Layout Utama */
+.main-layout {
+    display: flex;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Pengaturan Sidebar Umum */
+.sidebar-left, .sidebar-right {
+    flex: 1; /* Memberikan lebar yang sama */
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    height: fit-content;
+    position: sticky; /* Sidebar tetap diam saat di-scroll */
+    top: 80px; 
+}
+
+/* Konten Utama di Tengah */
+.content-center {
+    flex: 3; /* Area tengah lebih lebar */
+}
+
+/* Responsif untuk HP: Sidebar akan hilang/pindah ke bawah */
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    .sidebar-left, .sidebar-right {
+        display: none; /* Sembunyikan sidebar di layar kecil agar tidak sempit */
+    }
+}
