@@ -5,197 +5,139 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Website Personal Alexa">
 <title>Alexa Nethania Cyesya</title>
-
-<style>
-    /* CSS ASLI KAMU DENGAN TAMBAHAN STRUKTUR SIDEBAR */
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        font-family:'Segoe UI',sans-serif;
-        scroll-behavior:smooth;
-    }
-
-    body{
-        background: #ffffff;
-        color:#333;
-    }
-
-    /* NAVBAR TETAP */
-    .navbar{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        padding:20px 8%;
-        background:rgba(255, 202, 237, 0.95);
-        backdrop-filter:blur(10px);
-        position:fixed;
-        width:100%;
-        top:0;
-        z-index:1000;
-    }
-
-    .logo{ font-weight:bold; color:#2563eb; letter-spacing:2px; }
-    .nav-links{ list-style:none; display:flex; gap:25px; }
-    .nav-links a{ text-decoration:none; color:#444; transition:0.3s; }
-
-    /* --- PENGATURAN LAYOUT 3 KOLOM --- */
-    .main-wrapper {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 100px 2% 50px; /* Padding atas agar tidak tertutup navbar */
-    }
-
-    /* Sidebar Kiri & Kanan (Lebar Kecil) */
-    .sidebar {
-        flex: 0 0 180px; /* Lebar tetap 180px agar tidak mengganggu tengah */
-        height: fit-content;
-        position: sticky;
-        top: 100px;
-        background: #f9f9f9;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-
-    /* Bagian Tengah (Tetap Besar untuk Foto & Tabel) */
-    .content-center {
-        flex: 1;
-        max-width: 1000px; /* Menjaga agar konten tengah tetap dominan */
-    }
-
-    /* HERO STYLE (Sesuai Foto Kamu) */
-    .hero{
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        padding:40px 0;
-        min-height: 80vh;
-    }
-
-    .hero-text{ max-width:450px; }
-    .hero-text h1{ font-size:44px; margin-bottom:20px; }
-    .hero-text span{ color:#ec4899; }
-
-    .btn-primary{
-        padding:12px 30px;
-        background:#2563eb;
-        color:white;
-        border:none;
-        border-radius:30px;
-        cursor:pointer;
-    }
-
-    /* FOTO TETAP BESAR */
-    .hero-image img, .about-container img{
-        width: 450px; /* Sesuai keinginanmu agar tetap besar */
-        height: auto;
-        object-fit: cover;
-        border-radius: 20px;
-    }
-
-    /* TABLE STYLE (Sesuai Foto Kamu) */
-    .profile-table{
-        width:100%;
-        margin-top:20px;
-        border-collapse:collapse;
-        background:white;
-        box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    .profile-table th, .profile-table td{
-        border:1px solid #ddd;
-        padding:12px;
-    }
-
-    .profile-table th{
-        background:#2563eb;
-        color:white;
-        width:35%;
-        text-align: left;
-    }
-
-    /* SIDEBAR TEXT */
-    .sidebar h3 { font-size: 16px; color: #2563eb; margin-bottom: 10px; border-bottom: 2px solid pink; }
-    .sidebar p { font-size: 14px; margin-bottom: 10px; }
-
-    /* RESPONSIVE */
-    @media(max-width:1100px){
-        .sidebar { display: none; } /* Sidebar hilang di layar kecil agar foto tidak hancur */
-        .main-wrapper { padding: 100px 5%; }
-    }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="navbar">
-    <div class="logo">ALEXA NETHANIA CYESYA</div>
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
-    </nav>
+<div class="logo">ALEXA NETHANIA CYESYA</div>
+
+<nav>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#contact">contact</a></li>
+</ul>
+</nav>
+
+<div class="menu-toggle" id="menu-toggle">☰</div>
 </header>
 
-<div class="main-wrapper">
+<section class="hero" id="home">
+<div class="hero-text">
+<h1>Alexa  <span>Nethania Cyesya</span></h1>
+<p>
+Saya merupakan mahasiswa Universitas Internasional Batam,
+Program Studi Sistem Informasi semester 2.
+</p>
+<button class="btn-primary" onclick="scrollToSection('about')">
+See More
+</button>
+</div>
 
-    <aside class="sidebar">
-        <h3>Menu Cepat</h3>
-        <p><a href="#home" style="text-decoration:none; color:inherit;">🏠 Beranda</a></p>
-        <p><a href="#about" style="text-decoration:none; color:inherit;">👤 Profil</a></p>
-        <p><a href="#portfolio" style="text-decoration:none; color:inherit;">📁 Proyek</a></p>
-    </aside>
+<div class="hero-image">
+<img src="foto.JPEG" alt="Foto Alexa">
+</div>
+</section>
 
-    <main class="content-center">
-        
-        <section class="hero" id="home">
-            <div class="hero-text">
-                <h1>Alexa <span>Nethania Cyesya</span></h1>
-                <p>Saya merupakan mahasiswa Universitas Internasional Batam, Program Studi Sistem Informasi semester 2.</p>
-                <br>
-                <button class="btn-primary" onclick="document.getElementById('about').scrollIntoView()">See More</button>
-            </div>
-            <div class="hero-image">
-                <img src="foto.JPEG" alt="Foto Alexa">
-            </div>
-        </section>
+<section class="about" id="about">
+<h2>Tentang Saya</h2>
 
-        <section class="about" id="about">
-            <h2 style="margin-bottom:20px;">Tentang Saya</h2>
-            <div class="about-container" style="display:flex; gap:40px; align-items:flex-start;">
-                <img src="foto.JPEG" alt="Foto Profil">
-                <div class="about-text" style="flex:1;">
-                    <p>"Hari ini mungkin sulit, tapi besok bisa lebih baik"</p>
-                    <table class="profile-table">
-                        <tr><th>Nama</th><td>Alexa Nethania Cyesya</td></tr>
-                        <tr><th>Program Studi</th><td>Sistem Informasi</td></tr>
-                        <tr><th>NPM</th><td>2531145</td></tr>
-                        <tr><th>Hobi</th><td>berenang & memasak</td></tr>
-                        <tr><th>Cita-cita</th><td>Business Analyst</td></tr>
-                        <tr><th>Email</th><td>alexanethania00@email.com</td></tr>
-                    </table>
-                </div>
-            </div>
-        </section>
+<div class="about-container">
+<img src="foto.JPEG" alt="Foto Profil">
 
-    </main>
+<div class="about-text">
+<p>"Hari ini mungkin sulit, tapi besok bisa lebih baik"</p>
 
-    <aside class="sidebar">
-        <h3>Info Tambahan</h3>
-        <p><strong>Status:</strong> Aktif</p>
-        <p><strong>Lokasi:</strong> Batam</p>
-        <hr style="margin:10px 0; border:0; border-top:1px solid #ddd;">
-        <h3>Keahlian</h3>
-        <p>• UI Design</p>
-        <p>• Analisis Data</p>
-    </aside>
+
+
+<table class="profile-table">
+<tr>
+<th>Nama</th>
+<td>Alexa Nethania Cyesya</td>
+</tr>
+<tr>
+<th>Program Studi</th>
+<td>Sistem Informasi</td>
+</tr>
+<tr>
+<th>NPM</th>
+<td>2531145</td>
+</tr>
+<tr>
+<th>Tanggal Lahir</th>
+<td>21 Oktober 2005</td>
+</tr>
+<tr>
+<th>Alamat</th>
+<td>Batam, Kepulauan Riau</td>
+</tr>
+<tr>
+<th>Hobi</th>
+<td>berenang & memasak</td>
+</tr>
+
+<tr>
+<th>Makanan Favorit</th>
+<td>Nasi goreng & mie ayam</td>
+</tr>
+
+<tr>
+<th>Warna Favorit</th>
+<td>pink dan navy</td>
+</tr>
+
+<tr>
+<th>Cita-cita</th>
+<td>Business Analyst</td>
+</tr>
+<tr>
+<tr>
+<th>Jenjang pendidikan</th>
+<td>- sd 002 negri kota Batam
+
+    - smp 56 negri kota batam
+
+    - sma 4 negri kita batam
+
+    - Universitas Internasional batam<td>
+</tr>
+<tr>
+<th>Email</th>
+<td>alexanethania00@email.com</td>
+</tr>
+</table>
 
 </div>
+</div>
+</section>
+
+<section class="portfolio" id="portfolio">
+<h2>Portfolio</h2>
+
+<table class="portfolio-table">
+<tr>
+<th>Nama Project</th>
+<th>Jenis</th>
+<th>Preview</th>
+</tr>
+<tr>
+<td>UI Design Kampus</td>
+<td>Design</td>
+<td>
+<td>
+<img src="poster.kampus.jpg.jpeg" alt="Project"><br><br>
+<a href="#" class="btn-detail">Lihat Detail</a>
+</td>
+</td>
+</tr>
+</table>
+</div>
+</section>
+
+
 <section class="contact">
 <h2>Contact Me</h2>
 <section class="contact" id="contact"></section>
@@ -219,10 +161,11 @@
 </div>
 </section>
 
+</table>
+</section>
 
-
-<footer style="background:#2563eb; color:white; text-align:center; padding:20px; margin-top:50px;">
-    <small>© 2026 Alexa Cyesya | All Rights Reserved</small>
+<footer>
+<small>© 2026 Alexa Cyesya | All Rights Reserved</small>
 </footer>
 
 <script src="script.js"></script>
