@@ -236,3 +236,53 @@ transform: translateY(-40px) scale(1.5);
 opacity:0;
 }
 }
+/* Perbaikan Global untuk Gambar agar tidak pecah/melebar */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Penyesuaian untuk Hero Section */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse; /* Foto di atas, teks di bawah saat di HP */
+        text-align: center;
+    }
+    
+    .hero-image img {
+        width: 100% !important; /* Foto menyesuaikan lebar layar */
+        margin-bottom: 20px;
+    }
+}
+
+/* Penyesuaian untuk Section About */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Foto dan tabel jadi menumpuk ke bawah */
+        align-items: center;
+    }
+
+    .about-container img {
+        width: 100% !important;
+        max-width: 300px;
+    }
+
+    /* Membuat tabel bisa di-scroll ke samping jika terlalu lebar */
+    .about-text {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .profile-table th, .profile-table td {
+        padding: 8px; /* Kecilkan padding di HP */
+        font-size: 14px;
+    }
+}
+
+/* Penyesuaian Portfolio */
+@media (max-width: 600px) {
+    .portfolio-table th:nth-child(2), 
+    .portfolio-table td:nth-child(2) {
+        display: none; /* Sembunyikan kolom 'Jenis' di layar sangat kecil agar lega */
+    }
+}
