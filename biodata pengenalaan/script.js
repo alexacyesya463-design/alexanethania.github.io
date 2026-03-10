@@ -15,7 +15,8 @@ behavior:"smooth"
     const audio = document.getElementById("myAudio");
     const playBtn = document.getElementById("playBtn");
     const progressBar = document.getElementById("progressBar");
-
+    <button onclick="togglePlay()">Play</button>
+    
     // Fungsi Play dan Pause
     function togglePlay() {
         if (audio.paused) {
