@@ -206,24 +206,6 @@ body{
     margin: 20px auto;
 }
 
-.controls button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.controls button:hover {
-    background: #0056b3;
-}
-
-#progressBar {
-    width: 100%;
-    margin-top: 10px;
-}
 
 /* ================= CONTACT ================= */
 .contact-card {
