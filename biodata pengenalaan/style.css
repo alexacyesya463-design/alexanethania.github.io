@@ -236,3 +236,40 @@ transform: translateY(-40px) scale(1.5);
 opacity:0;
 }
 }
+/* ================= PERBAIKAN FOTO ABOUT ================= */
+.about-content-wrapper {
+    display: flex;
+    gap: 0; /* Menghilangkan gap agar terlihat menyatu (opsional, bisa kasih 20px) */
+    align-items: stretch; /* MEMAKSA foto dan tabel sama tinggi */
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.about-photo-full {
+    flex: 1.2; /* Memberikan porsi lebih besar untuk foto (ubah ke 1.5 jika ingin lebih besar lagi) */
+    width: 100%; 
+    min-height: 100%; /* Memastikan foto tidak pendek */
+    object-fit: cover; /* Foto tetap proporsional meskipun dipaksa tinggi */
+    object-position: center; 
+    border-radius: 20px 0 0 20px; /* Lengkungan hanya di sisi kiri */
+}
+
+.about-text-wrapper {
+    flex: 1.5; /* Porsi untuk tabel */
+    min-width: 0;
+}
+
+.profile-table {
+    width: 100%;
+    height: 100%; /* Tabel mengisi sisa ruang */
+    border-collapse: collapse;
+    border: none; /* Menghilangkan border luar agar lebih clean */
+}
+
+/* Mempercantik isi tabel agar sejajar dengan foto yang besar */
+.profile-table th, .profile-table td {
+    padding: 15px 20px; /* Padding lebih besar agar tabel ikut memanjang */
+    border: 1px solid #f0f0f0;
+}
