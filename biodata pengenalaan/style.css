@@ -12,11 +12,7 @@ body{
     color:#333;
     overflow-x: hidden; /* Mencegah scroll horizontal karena efek kursor */
 }
-/* Taruh di dalam <style> */
-.profile-table tr:hover {
-    background-color: #fce7f3; /* Warna pink sangat muda */
-    transition: 0.2s;
-}
+
 /* ================= NAVBAR ================= */
 .navbar{
     display:flex;
