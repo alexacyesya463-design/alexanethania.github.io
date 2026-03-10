@@ -166,6 +166,14 @@ body{
     background:#f9fafb;
 }
 
+/* Efek warna saat kursor lewat di atas baris tabel */
+.profile-table tr:hover td, 
+.portfolio-table tr:hover td {
+    background-color: #fce4ec !important; /* Warna pink favorit Anda */
+    transition: 0.2s;
+    cursor: default;
+}
+
 /* ================= CURSOR LOVE EFFECT ================= */
 /* Gunakan class khusus agar tidak kena ke tulisan lain */
 .cursor-heart {
