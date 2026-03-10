@@ -11,25 +11,30 @@ behavior:"smooth"
 });
 }
 
-   let audio = document.getElementById("myAudio");
+   const audio = document.getElementById("myAudio");
+const playBtn = document.getElementById("playBtn");
+const progressBar = document.getElementById("progressBar");
 
-function togglePlay(){
-if(audio.paused){
-audio.play();
-}else{
-audio.pause();
-}
-}
-
-function rewind(){
-audio.currentTime -= 10;
-}
-
-function forward(){
-audio.currentTime += 10;
+function togglePlay() {
+    if (audio.paused) {
+        audio.play();
+        playBtn.innerHTML = "⏸️ Pause";
+    } else {
+        audio.pause();
+        playBtn.innerHTML = "▶️ Play";
+    }
 }
 
-function changeProgress(){
-let progress = document.getElementById("progressBar");
-audio.currentTime = (progress.value/100) * audio.duration;
+function rewind() { audio.currentTime -= 10; }
+function forward() { audio.currentTime += 10; }
+
+audio.ontimeupdate = function() {
+    if (audio.duration) {
+        const progress = (audio.currentTime / audio.duration) * 100;
+        progressBar.value = progress;
+    }
+};
+
+function changeProgress() {
+    audio.currentTime = (progressBar.value / 100) * audio.duration;
 }

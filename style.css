@@ -196,33 +196,49 @@ body{
         opacity: 0;
     }
 }
-.audio-player {
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    width: 250px;
-    margin: 20px auto;
+
+.audio-player-container {
+    width: 100%; /* Agar memanjang mengikuti lebar konten */
+    max-width: 1000px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 8px solid #2563eb; /* Aksen biru navy */
+    margin: 20px 0;
 }
 
-.controls button {
-    background: #007bff;
+#track-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.music-btn {
+    background: #2563eb;
     color: white;
     border: none;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 10px 15px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
 }
 
-.controls button:hover {
-    background: #0056b3;
+.music-btn:hover {
+    background: #ec4899; /* Pink saat di-hover */
 }
 
 #progressBar {
-    width: 100%;
-    margin-top: 10px;
+    flex-grow: 1; /* Ini yang membuat progress bar jadi panjang */
+    cursor: pointer;
+    accent-color: #ec4899; /* Warna slider jadi pink */
 }
 
 /* ================= CONTACT ================= */
