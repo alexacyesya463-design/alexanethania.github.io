@@ -149,13 +149,16 @@
         <div class="audio-player-container">
     <p id="track-title">🎵 Music Favorit: Bruno Mars - Risk It All</p>
     
+   <div class="audio-player-container">
+    <p id="track-title">🎵 Music Favorit: Bruno Mars - Risk It All</p>
+    
     <audio id="myAudio">
         <source src="bruno.mp3" type="audio/mpeg">
     </audio>
 
     <div class="player-controls">
         <button class="music-btn" onclick="rewind()">⏪ -10s</button>
-        <button class="music-btn play-btn" id="playBtn" onclick="togglePlay()">▶️ Play</button>
+        <button class="music-btn" id="playBtn" onclick="togglePlay()">▶️ Play</button>
         <button class="music-btn" onclick="forward()">10s ⏩</button>
         
         <input type="range" id="progressBar" value="0" max="100" onchange="changeProgress()">

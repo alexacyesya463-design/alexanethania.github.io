@@ -197,50 +197,62 @@ body{
     }
 }
 
+/* Container Utama Pemutar Musik */
 .audio-player-container {
-    width: 100%; /* Agar memanjang mengikuti lebar konten */
-    max-width: 1000px;
     background: #ffffff;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     border-left: 8px solid #2563eb; /* Aksen biru navy */
-    margin: 20px 0;
+    margin: 20px auto;
+    max-width: 900px; /* Supaya lebarnya pas di tengah */
+    width: 95%;
 }
 
+/* Judul Musik */
 #track-title {
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 15px;
     color: #333;
-}
-
-.player-controls {
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
+/* Tata Letak Tombol & Bar (Sejajar) */
+.player-controls {
+    display: flex;
+    align-items: center; /* Sejajar secara vertikal */
+    gap: 15px; /* Jarak antar tombol */
+    flex-wrap: nowrap; /* Jangan biarkan turun ke bawah */
+}
+
+/* Desain Tombol */
 .music-btn {
     background: #2563eb;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 15px;
     border-radius: 8px;
     cursor: pointer;
+    font-size: 14px;
     transition: 0.3s;
-    white-space: nowrap;
+    white-space: nowrap; /* Teks tombol tidak pecah */
+    min-width: 70px;
 }
 
 .music-btn:hover {
     background: #ec4899; /* Pink saat di-hover */
 }
 
+/* Progress Bar Memanjang */
 #progressBar {
-    flex-grow: 1; /* Ini yang membuat progress bar jadi panjang */
+    flex-grow: 1; /* Ini kunci agar bar-nya memenuhi sisa ruang */
+    height: 8px;
     cursor: pointer;
-    accent-color: #ec4899; /* Warna slider jadi pink */
+    accent-color: #ec4899; /* Warna ungu/pink pada slider */
 }
-
 /* ================= CONTACT ================= */
 .contact-card {
     background: rgb(255, 202, 237, 0.95);
