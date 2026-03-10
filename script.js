@@ -10,8 +10,7 @@ document.getElementById(id).scrollIntoView({
 behavior:"smooth"
 });
 }
-
-   const audio = document.getElementById("myAudio");
+const audio = document.getElementById("myAudio");
 const playBtn = document.getElementById("playBtn");
 const progressBar = document.getElementById("progressBar");
 
