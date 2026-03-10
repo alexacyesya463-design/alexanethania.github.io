@@ -1,252 +1,238 @@
 /* ================= GLOBAL STYLES ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
 }
 
-body {
+body{
     background: #ffffff;
-    color: #333;
-    overflow-x: hidden;
+    color:#333;
+    overflow-x: hidden; /* Mencegah scroll horizontal karena efek kursor */
 }
 
 /* ================= NAVBAR ================= */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background: rgba(255, 202, 237, 0.95);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(255, 202, 237, 0.95);
+    backdrop-filter:blur(10px);
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
 }
 
-.logo {
-    font-weight: bold;
-    color: #2563eb;
-    letter-spacing: 2px;
+.logo{
+    font-weight:bold;
+    color:#2563eb;
+    letter-spacing:2px;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #444;
-    transition: 0.3s;
+.nav-links a{
+    text-decoration:none;
+    color:#444;
+    transition:0.3s;
 }
 
-.nav-links a:hover {
-    color: #ec4899;
+.nav-links a:hover{
+    color:#ec4899;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
 }
 
 /* ================= LAYOUT UTAMA ================= */
-.main-wrapper {
+.main-layout {
     display: flex;
-    flex-wrap: wrap; /* Izinkan elemen turun ke bawah di HP */
-    justify-content: center;
     gap: 20px;
-    padding: 120px 2% 50px; 
-    max-width: 1600px;
-    margin: 0 auto;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
-/* SIDEBAR CUSTOM (Kiri & Kanan) */
-.sidebar-custom {
-    flex: 0 0 250px; 
-    height: fit-content;
-    position: sticky;
-    top: 100px;
+.sidebar-left, .sidebar-right {
+    flex: 1;
     background: #f4f4f4;
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    z-index: 10;
-    display: block !important; /* Memastikan tidak hilang */
+    border-radius: 10px;
+    height: fit-content;
+    position: sticky;
+    top: 100px; 
 }
 
-/* AREA TENGAH */
 .content-center {
-    flex: 1;
-    min-width: 300px; /* Minimal lebar di HP */
-    max-width: 900px;
+    flex: 3;
 }
 
 /* ================= HERO SECTION ================= */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px 0;
-    gap: 30px;
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:120px 8% 80px;
+    min-height:100vh;
 }
 
-.hero-text h1 {
-    font-size: 40px;
+.hero-text{
+    max-width:500px;
+}
+
+.hero-text h1{
+    font-size: 44px;
     margin-bottom: 20px;
+    line-height: 1.2;
 }
 
+/* INI PERBAIKANNYA: Nama kamu dibuat diam (Static) */
 .hero-text h1 span {
     color: #ec4899;
+    display: inline-block; 
+    transform: none !important; 
+    animation: none !important; 
+    position: static !important;
 }
 
-.hero-image img {
-    max-width: 100%;
-    width: 400px;
+.btn-primary{
+    padding:12px 30px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-primary:hover{
+    background:#ec4899;
+}
+
+.hero-image img,
+.about-container img{
+    width:420px;
     height: auto;
-    border-radius: 20px;
+    object-fit:cover;
+    border-radius:20px;
 }
 
-/* ================= ABOUT SECTION (PERBAIKAN FOTO SEJAJAR) ================= */
-.about {
-    padding: 40px 0;
+/* ================= ABOUT & TABLES ================= */
+.about{
+    padding:100px 10%;
 }
 
-.about-content-wrapper {
+.about-container {
     display: flex;
-    gap: 30px;
-    align-items: stretch; /* PENTING: Membuat foto dan tabel sama tinggi */
+    gap: 40px;
 }
 
-.about-photo-full {
-    width: 350px; /* Lebar foto di desktop */
-    object-fit: cover; /* Foto akan mengisi area tanpa distorsi */
-    object-position: top center; /* Menyesuaikan titik tengah foto */
-    border-radius: 20px;
-    flex-shrink: 0; /* Mencegah foto mengkerut */
-}
-
-.about-text-wrapper {
+.about-text {
     flex: 1;
-    min-width: 0;
 }
 
-/* TABEL */
-.profile-table {
+.profile-table, .portfolio-table {
     width: 100%;
-    height: 100%; /* Membuat tabel mengisi seluruh tinggi container */
     border-collapse: collapse;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
 }
 
-.profile-table th, .profile-table td {
+.profile-table th, .profile-table td,
+.portfolio-table th, .portfolio-table td {
     border: 1px solid #ddd;
     padding: 12px;
+    text-align: left;
 }
 
-.table-label {
+.profile-table th, .portfolio-table th {
     background: #2563eb;
     color: white;
-    text-align: left;
-    white-space: nowrap; /* Mencegah label turun baris */
 }
 
-/* ================= PORTFOLIO ================= */
-.portfolio {
-    padding: 40px 0;
+.profile-table tr:nth-child(even){
+    background:#f9fafb;
+}
+
+/* ================= CURSOR LOVE EFFECT ================= */
+/* Gunakan class khusus agar tidak kena ke tulisan lain */
+.cursor-heart {
+    position: absolute;
+    pointer-events: none;
+    color: #ec4899; /* Kamu bisa pakai warna atau gambar */
+    font-size: 20px;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    animation: animateLove 1s linear forwards;
+}
+
+@keyframes animateLove {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -150px) rotate(360deg) scale(0);
+        opacity: 0;
+    }
 }
 
 /* ================= CONTACT ================= */
 .contact-card {
-    background: rgba(255, 202, 237, 0.5);
-    padding: 30px;
+    background: rgb(255, 202, 237, 0.95);
+    max-width: 500px;
+    margin: auto;
+    padding: 50px;
     border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     text-align: center;
-    margin-top: 40px;
 }
 
-/* ================= FOOTER & EFEK ================= */
-footer {
-    background: #2563eb;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+/* ================= FOOTER ================= */
+footer{
+    width:100%;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#2563eb;
+    color:white;
+    margin-top:50px;
 }
 
-.heart {
-    position: fixed;
-    font-size: 20px;
-    pointer-events: none;
-    animation: float 1s linear forwards;
-    z-index: 9999;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .main-layout { flex-direction: column; }
+    .sidebar-left, .sidebar-right { display: none; }
+    .hero, .about-container { flex-direction: column; text-align: center; }
+    .hero-text h1 { font-size: 28px; }
+}
+.heart{
+position: fixed;
+font-size:20px;
+pointer-events:none;
+animation: float 1s linear forwards;
 }
 
-@keyframes float {
-    0% { transform: translateY(0) scale(1); opacity: 1; }
-    100% { transform: translateY(-40px) scale(1.5); opacity: 0; }
+@keyframes float{
+0%{
+transform: translateY(0) scale(1);
+opacity:1;
 }
-
-/* ================= RESPONSIVE HP (SIDEBAR MUNCUL DI BAWAH) ================= */
-@media (max-width: 1150px) {
-    .main-wrapper {
-        flex-direction: column; /* Susun menumpuk ke bawah */
-        padding: 100px 5%;
-    }
-
-    .sidebar-custom {
-        flex: none;
-        width: 100%; /* Sidebar jadi lebar penuh di HP */
-        position: static; /* Biar tidak sticky */
-        margin-bottom: 20px;
-        order: 2; /* Pindahkan ke bawah setelah konten utama */
-    }
-
-    .content-center {
-        width: 100%;
-        order: 1; /* Konten utama muncul paling atas */
-    }
-
-    .hero, .about-content-wrapper {
-        flex-direction: column; /* Di HP, susun menumpuk */
-        text-align: center;
-        gap: 20px;
-    }
-
-    .hero-image img, .about-photo-full {
-        width: 100% !important;
-        max-width: 350px; /* Batasi lebar foto agar tidak terlalu besar di HP */
-        height: auto; /* Foto menyesuaikan proporsi */
-    }
-
-    .about-text-wrapper {
-        width: 100%;
-        overflow-x: auto; /* Agar tabel bisa di-geser jika terlalu lebar */
-    }
-    
-    .profile-table {
-        min-width: 500px; /* Supaya teks tabel tidak terjepit di HP */
-    }
-
-    .nav-links {
-        display: none; /* Sembunyikan menu atas di HP */
-    }
+100%{
+transform: translateY(-40px) scale(1.5);
+opacity:0;
 }
-/* ================= EFEK KURSOR HATI ================= */
-.heart {
-    position: fixed;
-    font-size: 20px;
-    color: #ec4899; /* Warna pink */
-    pointer-events: none;
-    z-index: 9999;
-    animation: floatHeart 1s linear forwards;
-}
-
-@keyframes floatHeart {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-50%, -100px) scale(1.5);
-        opacity: 0;
-    }
 }
