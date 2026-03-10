@@ -1,58 +1,52 @@
 /* ================= GLOBAL STYLES ================= */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-    scroll-behavior:smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
 
-body{
+body {
     background: #ffffff;
-    color:#333;
-    overflow-x: hidden; /* Mencegah scroll horizontal karena efek kursor */
+    color: #333;
+    overflow-x: hidden;
 }
 
 /* ================= NAVBAR ================= */
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    background:rgba(255, 202, 237, 0.95);
-    backdrop-filter:blur(10px);
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:1000;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(255, 202, 237, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo{
-    font-weight:bold;
-    color:#2563eb;
-    letter-spacing:2px;
+.logo {
+    font-weight: bold;
+    color: #2563eb;
+    letter-spacing: 2px;
 }
 
-.nav-links{
-    list-style:none;
-    display:flex;
-    gap:25px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
-.nav-links a{
-    text-decoration:none;
-    color:#444;
-    transition:0.3s;
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    transition: 0.3s;
 }
 
-.nav-links a:hover{
-    color:#ec4899;
-}
-
-.menu-toggle{
-    display:none;
-    font-size:24px;
-    cursor:pointer;
+.nav-links a:hover {
+    color: #ec4899;
 }
 
 /* ================= LAYOUT UTAMA ================= */
@@ -60,93 +54,66 @@ body{
     display: flex;
     gap: 20px;
     max-width: 1400px;
-    margin: 20px auto;
+    margin: 100px auto 20px; /* Jarak dari navbar */
     padding: 0 20px;
 }
 
 .sidebar-left, .sidebar-right {
-    flex: 1;
+    flex: 0 0 250px; /* Lebar tetap di desktop */
     background: #f4f4f4;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     height: fit-content;
     position: sticky;
-    top: 100px; 
+    top: 100px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .content-center {
     flex: 3;
+    min-width: 0; /* Mencegah elemen meluber */
 }
 
-/* ================= HERO SECTION ================= */
-.hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:120px 8% 80px;
-    min-height:100vh;
+/* ================= HERO & ABOUT ================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    gap: 20px;
 }
 
-.hero-text{
-    max-width:500px;
-}
-
-.hero-text h1{
-    font-size: 44px;
+.hero-text h1 {
+    font-size: 40px;
     margin-bottom: 20px;
-    line-height: 1.2;
 }
 
-/* INI PERBAIKANNYA: Nama kamu dibuat diam (Static) */
 .hero-text h1 span {
     color: #ec4899;
-    display: inline-block; 
-    transform: none !important; 
-    animation: none !important; 
-    position: static !important;
 }
 
-.btn-primary{
-    padding:12px 30px;
-    background:#2563eb;
-    color:white;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.btn-primary:hover{
-    background:#ec4899;
-}
-
-.hero-image img,
-.about-container img{
-    width:420px;
+/* Gambar Responsif */
+img {
+    max-width: 100%;
     height: auto;
-    object-fit:cover;
-    border-radius:20px;
+    border-radius: 20px;
 }
 
-/* ================= ABOUT & TABLES ================= */
-.about{
-    padding:100px 10%;
+.hero-image img, .about-container img {
+    width: 400px;
 }
 
 .about-container {
     display: flex;
-    gap: 40px;
+    gap: 30px;
+    padding: 40px 0;
 }
 
-.about-text {
-    flex: 1;
-}
-
+/* ================= TABLES ================= */
 .profile-table, .portfolio-table {
     width: 100%;
     border-collapse: collapse;
     background: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     margin-top: 20px;
 }
 
@@ -154,7 +121,6 @@ body{
 .portfolio-table th, .portfolio-table td {
     border: 1px solid #ddd;
     padding: 12px;
-    text-align: left;
 }
 
 .profile-table th, .portfolio-table th {
@@ -162,127 +128,83 @@ body{
     color: white;
 }
 
-.profile-table tr:nth-child(even){
-    background:#f9fafb;
-}
-
-/* ================= CURSOR LOVE EFFECT ================= */
-/* Gunakan class khusus agar tidak kena ke tulisan lain */
-.cursor-heart {
-    position: absolute;
-    pointer-events: none;
-    color: #ec4899; /* Kamu bisa pakai warna atau gambar */
-    font-size: 20px;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    animation: animateLove 1s linear forwards;
-}
-
-@keyframes animateLove {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-50%, -150px) rotate(360deg) scale(0);
-        opacity: 0;
-    }
-}
-
 /* ================= CONTACT ================= */
 .contact-card {
-    background: rgb(255, 202, 237, 0.95);
-    max-width: 500px;
-    margin: auto;
-    padding: 50px;
+    background: rgba(255, 202, 237, 0.5);
+    padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     text-align: center;
+    margin-top: 40px;
 }
 
-/* ================= FOOTER ================= */
-footer{
-    width:100%;
-    height:70px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#2563eb;
-    color:white;
-    margin-top:50px;
+/* ================= CURSOR EFFECT ================= */
+.heart {
+    position: fixed;
+    font-size: 20px;
+    pointer-events: none;
+    animation: float 1s linear forwards;
+    z-index: 9999;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 900px) {
-    .main-layout { flex-direction: column; }
-    .sidebar-left, .sidebar-right { display: none; }
-    .hero, .about-container { flex-direction: column; text-align: center; }
-    .hero-text h1 { font-size: 28px; }
-}
-.heart{
-position: fixed;
-font-size:20px;
-pointer-events:none;
-animation: float 1s linear forwards;
+@keyframes float {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-50px) scale(1.5); opacity: 0; }
 }
 
-@keyframes float{
-0%{
-transform: translateY(0) scale(1);
-opacity:1;
-}
-100%{
-transform: translateY(-40px) scale(1.5);
-opacity:0;
-}
-}
-/* Perbaikan Global untuk Gambar agar tidak pecah/melebar */
-img {
-    max-width: 100%;
-    height: auto;
-}
+/* ================= RESPONSIVE (MOBILE FRIENDLY) ================= */
 
-/* Penyesuaian untuk Hero Section */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column-reverse; /* Foto di atas, teks di bawah saat di HP */
+@media (max-width: 1100px) {
+    .main-layout {
+        flex-direction: column; /* Menyusun ke bawah */
+        margin-top: 80px;
+    }
+
+    .sidebar-left, .sidebar-right {
+        flex: none;
+        width: 100%;
+        position: static; /* Biar tidak sticky di HP */
+        order: 2; /* Memindahkan sidebar ke bawah konten utama */
+    }
+
+    .content-center {
+        order: 1; /* Konten utama muncul duluan */
+    }
+
+    .hero, .about-container {
+        flex-direction: column;
         text-align: center;
     }
-    
-    .hero-image img {
-        width: 100% !important; /* Foto menyesuaikan lebar layar */
-        margin-bottom: 20px;
+
+    .hero-image img, .about-container img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .nav-links {
+        display: none; /* Sembunyikan menu atas di HP agar tidak berantakan */
     }
 }
 
-/* Penyesuaian untuk Section About */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Foto dan tabel jadi menumpuk ke bawah */
-        align-items: center;
-    }
-
-    .about-container img {
-        width: 100% !important;
-        max-width: 300px;
-    }
-
-    /* Membuat tabel bisa di-scroll ke samping jika terlalu lebar */
-    .about-text {
+@media (max-width: 600px) {
+    .hero-text h1 { font-size: 28px; }
+    
+    /* Agar tabel bisa di-geser (scroll) jika terlalu lebar di HP */
+    .about-text, .portfolio {
         width: 100%;
         overflow-x: auto;
     }
     
     .profile-table th, .profile-table td {
-        padding: 8px; /* Kecilkan padding di HP */
-        font-size: 14px;
+        font-size: 13px;
+        padding: 8px;
     }
 }
 
-/* Penyesuaian Portfolio */
-@media (max-width: 600px) {
-    .portfolio-table th:nth-child(2), 
-    .portfolio-table td:nth-child(2) {
-        display: none; /* Sembunyikan kolom 'Jenis' di layar sangat kecil agar lega */
-    }
+/* ================= FOOTER ================= */
+footer {
+    background: #2563eb;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
 }
