@@ -145,6 +145,22 @@
                 </tr>
             </table>
         </section>
+        <div class="audio-player">
+  <p id="track-title">Memutar: Musik Restoran 01</p>
+  
+  <audio id="myAudio">
+    <source src="Bruno Mars - Risk It All Official Music Video.mp3Bruno Mars - Risk It All Official Music Video.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung elemen audio.
+  </audio>
+
+  <div class="controls">
+    <button onclick="rewind()">⏪ -10s</button>
+    <button id="playBtn" onclick="togglePlay()">▶️ Play</button>
+    <button onclick="forward()">10s ⏩</button>
+  </div>
+  
+  <input type="range" id="progressBar" value="0" max="100" onchange="changeProgress()">
+</div>
 
         <section class="contact" id="contact">
             <h2 style="margin-bottom: 20px; text-align: center;">Contact Me</h2>

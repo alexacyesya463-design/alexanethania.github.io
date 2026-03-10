@@ -188,6 +188,34 @@ body{
         opacity: 0;
     }
 }
+.audio-player {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 250px;
+    margin: 20px auto;
+}
+
+.controls button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background: #0056b3;
+}
+
+#progressBar {
+    width: 100%;
+    margin-top: 10px;
+}
 
 /* ================= CONTACT ================= */
 .contact-card {
