@@ -37,3 +37,23 @@ audio.ontimeupdate = function() {
 function changeProgress() {
     audio.currentTime = (progressBar.value / 100) * audio.duration;
 }
+let music = document.getElementById("musik");
+let time = document.getElementById("time");
+
+music.addEventListener("timeupdate", function(){
+
+let current = music.currentTime;
+let duration = music.duration;
+
+let menit = Math.floor(current / 60);
+let detik = Math.floor(current % 60);
+
+let menitTotal = Math.floor(duration / 60);
+let detikTotal = Math.floor(duration % 60);
+
+if(detik < 10) detik = "0" + detik;
+if(detikTotal < 10) detikTotal = "0" + detikTotal;
+
+time.innerHTML = menit + ":" + detik + " / " + menitTotal + ":" + detikTotal;
+
+});
