@@ -11,42 +11,25 @@ behavior:"smooth"
 });
 }
 
-    // Inisialisasi elemen
-    const audio = document.getElementById("myAudio");
-    const playBtn = document.getElementById("playBtn");
-    const progressBar = document.getElementById("progressBar");
-    <button onclick="togglePlay()">Play</button>
-    
-    // Fungsi Play dan Pause
-    function togglePlay() {
-        if (audio.paused) {
-            audio.play();
-            playBtn.innerHTML = "⏸️ Pause";
-        } else {
-            audio.pause();
-            playBtn.innerHTML = "▶️ Play";
-        }
-    }
+   let audio = document.getElementById("myAudio");
 
-    // Fungsi Mundur 10 detik
-    function rewind() {
-        audio.currentTime -= 10;
-    }
+function togglePlay(){
+if(audio.paused){
+audio.play();
+}else{
+audio.pause();
+}
+}
 
-    // Fungsi Maju 10 detik
-    function forward() {
-        audio.currentTime += 10;
-    }
+function rewind(){
+audio.currentTime -= 10;
+}
 
-    // Update Progress Bar mengikuti jalannya musik
-    audio.ontimeupdate = function() {
-        if (audio.duration) {
-            const progress = (audio.currentTime / audio.duration) * 100;
-            progressBar.value = progress;
-        }
-    };
+function forward(){
+audio.currentTime += 10;
+}
 
-    // Fungsi geser progress bar secara manual
-    function changeProgress() {
-        audio.currentTime = (progressBar.value / 100) * audio.duration;
-    }
+function changeProgress(){
+let progress = document.getElementById("progressBar");
+audio.currentTime = (progress.value/100) * audio.duration;
+}
