@@ -255,27 +255,6 @@ body{
 }
 
 /* ================= BUCKET LIST ================= */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
-body{
-    background:linear-gradient(135deg,#e0f2fe,#fce7f3);
-}
-
-/* NAVBAR */
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    padding:15px 8%;
-    background:white;
-    position:fixed;
-    width:100%;
-    top:0;
-}
 
 .navbar ul{
     display:flex;
