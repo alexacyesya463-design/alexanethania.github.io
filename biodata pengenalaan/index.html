@@ -169,33 +169,67 @@
     <h1>🌟 My Bucket List</h1>
     <p>Hal-hal yang ingin saya capai di masa depan</p>
 
-    <div class="container">
+    <!-- FIX NAVBAR (biar bucket kebuka di halaman ini, bukan file lain) -->
 
-        <div class="card">
-            <img src="images/travel.jpg" alt="">
-            <h3>Travel ke Luar Negeri</h3>
-            <p>Ingin mengunjungi Jepang dan Korea</p>
-        </div>
+<li><a href="#bucket">Bucket List</a></li>
 
-        <div class="card">
-            <img src="images/success.jpg" alt="">
-            <h3>Menjadi Sukses</h3>
-            <p>Membahagiakan orang tua dan punya karier bagus</p>
-        </div>
+<!-- FIX SIDEBAR -->
 
-        <div class="card">
-            <img src="images/business.jpg" alt="">
-            <h3>Punya Bisnis Sendiri</h3>
-            <p>Membuka usaha dan menjadi entrepreneur</p>
-        </div>
+<li><a href="#bucket" style="text-decoration: none; color: #333;">📝✨ Bucket List</a></li>
 
-        <div class="card">
-            <img src="images/coding.jpg" alt="">
-            <h3>Mahir Coding</h3>
-            <p>Menjadi web developer profesional</p>
-        </div>
+<!-- FIX CLASS AUDIO (hapus titik) -->
 
+<div class="audio-player-container">
+  <p id="track-title">🎵 Music Favorit: Bruno Mars - Risk It All</p>
+    <audio id="myAudio">
+        <source src="bruno.mp3" type="audio/mpeg">
+    </audio>
+    <p id="time">00:00 / 00:00</p>
+    <div class="player-controls">
+        <button class="music-btn" onclick="rewind()">⏪ -10s</button>
+        <button class="music-btn" id="playBtn" onclick="togglePlay()">▶️ Play</button>
+        <button class="music-btn" onclick="forward()">10s ⏩</button>
+
+```
+    <input type="range" id="progressBar" value="0" max="100" onchange="changeProgress()">
+</div>
+```
+
+</div>
+<!-- FIX UTAMA BUCKET LIST -->
+
+<section class="bucket" id="bucket">
+    <h1>🌟 My Bucket List</h1>
+    <p>Hal-hal yang ingin saya capai di masa depan</p>
+
+```
+<div class="container">
+
+    <div class="card">
+        <img src="images/travel.jpg" alt="travel">
+        <h3>Travel ke Luar Negeri</h3>
+        <p>Ingin mengunjungi Jepang dan Korea</p>
     </div>
+
+    <div class="card">
+        <img src="images/success.jpg" alt="success">
+        <h3>Menjadi Sukses</h3>
+        <p>Membahagiakan orang tua dan punya karier bagus</p>
+    </div>
+
+    <div class="card">
+        <img src="images/business.jpg" alt="business">
+        <h3>Punya Bisnis Sendiri</h3>
+        <p>Membuka usaha dan menjadi entrepreneur</p>
+    </div>
+
+    <div class="card">
+        <img src="images/coding.jpg" alt="coding">
+        <h3>Mahir Coding</h3>
+        <p>Menjadi web developer profesional</p>
+    </div>
+
+</div>
 </section>
 
         <section class="contact" id="contact">
