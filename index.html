@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Website Personal Alexa">
 <title>Alexa Nethania Cyesya</title>
+<title>Bucket List</title>
 <link rel="stylesheet" href="style.css">
 <style>
     /* CSS KUNCI AGAR SIDEBAR SEJAJAR & FOTO TETAP BESAR */
@@ -65,6 +66,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="bucketlist.html">Bucket List</a></li>
             <li><a href="#contact">contact</a></li>
         </ul>
     </nav>
@@ -79,6 +81,7 @@
             <li style="margin-bottom: 15px;"><a href="#home" style="text-decoration: none; color: #333;">🏠 Home</a></li>
             <li style="margin-bottom: 15px;"><a href="#about" style="text-decoration: none; color: #333;">👤 About</a></li>
             <li style="margin-bottom: 15px;"><a href="#portfolio" style="text-decoration: none; color: #333;">📂 Portfolio</a></li>
+            <li><a href="#contact" style="text-decoration: none; color: #333;">📝✨ Bucket List</a></li>
             <li><a href="#contact" style="text-decoration: none; color: #333;">📞 Contact</a></li>
         </ul>
     </aside>
@@ -161,6 +164,75 @@
     </div>
   
 </div>
+
+<section class="bucket">
+    <h1>🌟 My Bucket List</h1>
+    <p>Hal-hal yang ingin saya capai di masa depan</p>
+
+    <!-- FIX NAVBAR (biar bucket kebuka di halaman ini, bukan file lain) -->
+
+<li><a href="#bucket">Bucket List</a></li>
+
+<!-- FIX SIDEBAR -->
+
+<li><a href="#bucket" style="text-decoration: none; color: #333;">📝✨ Bucket List</a></li>
+
+<!-- FIX CLASS AUDIO (hapus titik) -->
+
+<div class="audio-player-container">
+  <p id="track-title">🎵 Music Favorit: Bruno Mars - Risk It All</p>
+    <audio id="myAudio">
+        <source src="bruno.mp3" type="audio/mpeg">
+    </audio>
+    <p id="time">00:00 / 00:00</p>
+    <div class="player-controls">
+        <button class="music-btn" onclick="rewind()">⏪ -10s</button>
+        <button class="music-btn" id="playBtn" onclick="togglePlay()">▶️ Play</button>
+        <button class="music-btn" onclick="forward()">10s ⏩</button>
+
+```
+    <input type="range" id="progressBar" value="0" max="100" onchange="changeProgress()">
+</div>
+```
+
+</div>
+
+<!-- FIX UTAMA BUCKET LIST -->
+
+<section class="bucket" id="bucket">
+    <h1>🌟 My Bucket List</h1>
+    <p>Hal-hal yang ingin saya capai di masa depan</p>
+
+```
+<div class="container">
+
+    <div class="card">
+        <img src="images/travel.jpg" alt="travel">
+        <h3>Travel ke Luar Negeri</h3>
+        <p>Ingin mengunjungi Jepang dan Korea</p>
+    </div>
+
+    <div class="card">
+        <img src="images/success.jpg" alt="success">
+        <h3>Menjadi Sukses</h3>
+        <p>Membahagiakan orang tua dan punya karier bagus</p>
+    </div>
+
+    <div class="card">
+        <img src="images/business.jpg" alt="business">
+        <h3>Punya Bisnis Sendiri</h3>
+        <p>Membuka usaha dan menjadi entrepreneur</p>
+    </div>
+
+    <div class="card">
+        <img src="images/coding.jpg" alt="coding">
+        <h3>Mahir Coding</h3>
+        <p>Menjadi web developer profesional</p>
+    </div>
+
+</div>
+
+</section>
 
         <section class="contact" id="contact">
             <h2 style="margin-bottom: 20px; text-align: center;">Contact Me</h2>
