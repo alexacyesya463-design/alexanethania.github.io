@@ -56,7 +56,3 @@ audio.ontimeupdate = function() {
         time.innerHTML = menit + ":" + detik + " / " + menitTotal + ":" + detikTotal;
     }
 };
-
-function changeProgress() {
-audio.currentTime = (progressBar.value / 100) * audio.duration;
-}
