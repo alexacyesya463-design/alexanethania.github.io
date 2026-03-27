@@ -471,3 +471,13 @@ opacity:0;
 .cute-btn {
     margin-top: 15px;
 }
+.see-more {
+    margin: 15px 0;
+}
+.see-more {
+    margin-top: 15px;
+    padding: 10px 15px;
+}
+.see-more:hover {
+    transform: scale(1.05);
+}
