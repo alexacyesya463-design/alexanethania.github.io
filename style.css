@@ -410,12 +410,9 @@ opacity:0;
 }
 
 /* iframe bisa scroll */
-.pdf-panel iframe {
-    flex: 1;
-    width: 100%;
+.pdf-panel {
+    width: 90%;   /* hampir penuh */
+    max-width: none; /* biar gak dibatasi */
     border: none;
     overflow-y: scroll;
-}
-body.blur {
-    filter: blur(3px);
 }
