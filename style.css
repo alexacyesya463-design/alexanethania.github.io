@@ -197,17 +197,6 @@ body{
     }
 }
 
-/* Container Utama Pemutar Musik */
-.audio-player-container {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-left: 8px solid #2563eb; /* Aksen biru navy */
-    margin: 20px auto;
-    max-width: 900px; /* Supaya lebarnya pas di tengah */
-    width: 95%;
-}
 
 /* Judul Musik */
 #track-title {
