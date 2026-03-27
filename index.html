@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Website Personal Alexa">
 <title>Alexa Nethania Cyesya</title>
-<title>Bucket List</title>
 <link rel="stylesheet" href="style.css">
 <style>
     /* CSS KUNCI AGAR SIDEBAR SEJAJAR & FOTO TETAP BESAR */
@@ -79,12 +78,9 @@
             <li style="margin-bottom: 15px;"><a href="#home" style="text-decoration: none; color: #333;">🏠 Home</a></li>
             <li style="margin-bottom: 15px;"><a href="#about" style="text-decoration: none; color: #333;">👤 About</a></li>
             <li style="margin-bottom: 15px;"><a href="#portfolio" style="text-decoration: none; color: #333;">📂 Portfolio</a></li>
-            <li><a href="#contact" style="text-decoration: none; color: #333;">📝✨ Bucket List</a></li>
+            <li><a href="#bucket list" style="text-decoration: none; color: #333;">📝✨ Bucket List</a></li>
             <li><a href="#contact" style="text-decoration: none; color: #333;">📞 Contact</a></li>
         </ul>
-        <button class="btn-cantik" onclick="openSidebarPDF()">
-        📄 Lihat Wireframe
-        </button>
     </aside>
 
     <main class="content-center">
@@ -215,13 +211,6 @@
             </div>
         </section>
 
-        <!-- PDF VIEWER -->
-<div id="cvSection" style="display:none; margin-top:40px;">
-    <h2>Curriculum Vitae</h2>
-    <iframe src="cv.pdf" width="100%" height="600px" style="border:none;"></iframe>
-</div>
-
-
     </main>
 
     <aside class="sidebar-custom">
@@ -264,34 +253,5 @@ heart.remove();
 },1000);
 
 });
-</script>
-
-<script src="script.js"></script>
-<script>
-function showPDF(){
-    document.getElementById("cvSection").style.display = "block";
-
-    // scroll ke PDF biar langsung kelihatan
-    document.getElementById("cvSection").scrollIntoView({
-        behavior: "smooth"
-    });
-}
-</script>
-<div id="pdfPanel" class="pdf-panel">
-    <div class="pdf-header">
-        <h3>Wireframe</h3>
-        <span onclick="closeSidebarPDF()">✖</span>
-    </div>
-
-    <iframe src="wireframe.png"></iframe>
-</div>
-<script>
-function openSidebarPDF(){
-    document.getElementById("pdfPanel").classList.add("active");
-}
-
-function closeSidebarPDF(){
-    document.getElementById("pdfPanel").classList.remove("active");
-}
 </script>
 </body>

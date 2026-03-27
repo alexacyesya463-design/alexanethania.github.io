@@ -56,4 +56,3 @@ audio.ontimeupdate = function() {
         time.innerHTML = menit + ":" + detik + " / " + menitTotal + ":" + detikTotal;
     }
 };
-
