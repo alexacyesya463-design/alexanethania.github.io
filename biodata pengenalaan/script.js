@@ -56,3 +56,14 @@ audio.ontimeupdate = function() {
         time.innerHTML = menit + ":" + detik + " / " + menitTotal + ":" + detikTotal;
     }
 };
+const openBtn = document.getElementById("openPdfBtn");
+const pdfPanel = document.getElementById("pdfPanel");
+const closeBtn = document.getElementById("closePdf");
+
+openBtn.addEventListener("click", () => {
+    pdfPanel.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+    pdfPanel.classList.remove("active");
+});
