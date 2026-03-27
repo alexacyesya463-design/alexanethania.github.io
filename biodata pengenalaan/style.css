@@ -354,3 +354,44 @@ transform: translateY(-40px) scale(1.5);
 opacity:0;
 }
 }
+/* PANEL SAMPING */
+.pdf-panel{
+    position: fixed;
+    top: 0;
+    right: -100%; /* awalnya disembunyikan */
+    width: 400px;
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+/* SAAT AKTIF */
+.pdf-panel.active{
+    right: 0;
+}
+
+/* HEADER */
+.pdf-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+}
+
+.pdf-header span{
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* ISI PDF */
+.pdf-panel iframe{
+    flex: 1;
+    width: 100%;
+    border: none;
+}
