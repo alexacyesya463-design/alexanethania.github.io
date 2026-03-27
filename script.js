@@ -76,3 +76,8 @@ closeBtn.addEventListener("click", () => {
     pdfPanel.classList.remove("active");
     document.body.classList.remove("blur");
 });
+document.addEventListener("click", (e) => {
+    if (!pdfPanel.contains(e.target) && e.target !== openBtn) {
+        pdfPanel.classList.remove("active");
+    }
+});

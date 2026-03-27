@@ -445,3 +445,6 @@ opacity:0;
     height: 40px;
     flex-shrink: 0;
 }
+.pdf-panel.active {
+    right: 0;
+}
