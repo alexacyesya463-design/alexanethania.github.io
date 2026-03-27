@@ -67,3 +67,12 @@ openBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     pdfPanel.classList.remove("active");
 });
+openBtn.addEventListener("click", () => {
+    pdfPanel.classList.add("active");
+    document.body.classList.add("blur");
+});
+
+closeBtn.addEventListener("click", () => {
+    pdfPanel.classList.remove("active");
+    document.body.classList.remove("blur");
+});
