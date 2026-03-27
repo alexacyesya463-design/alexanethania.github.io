@@ -448,3 +448,26 @@ opacity:0;
 .pdf-panel.active {
     right: 0;
 }
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* JARAK ANTAR MENU */
+}
+.menu li {
+    list-style: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.menu li {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* jarak icon & teks */
+}
+.menu li:hover {
+    background: #ffe0e9;
+}
+.cute-btn {
+    margin-top: 15px;
+}
