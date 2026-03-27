@@ -430,3 +430,6 @@ opacity:0;
         width: 100%; /* di HP jadi full */
     }
 }
+.pdf-panel {
+    background: #f5f5f5; /* biar gak putih polos */
+}
