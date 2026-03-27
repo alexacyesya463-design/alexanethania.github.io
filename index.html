@@ -73,14 +73,9 @@
     <div class="menu-toggle" id="menu-toggle">☰</div>
 </header>
 
-<div class="main-wrapper">
+<aside class="sidebar-custom">
 
-    <aside class="sidebar-custom">
-        <li style="margin-bottom: 15px;">
-    <a href="#" onclick="showPDF()" style="text-decoration: none; color: #333;">
-        📄 Lihat wireframe
-    </a>
-</li>
+    <h3 style="color: #2563eb; font-size: 16px; border-bottom: 2px solid pink; padding-bottom: 5px;">Menu</h3>
         <h3 style="color: #2563eb; font-size: 16px; border-bottom: 2px solid pink; padding-bottom: 5px;">Menu</h3>
         <ul style="list-style: none; padding-top: 10px;">
             <li style="margin-bottom: 15px;"><a href="#home" style="text-decoration: none; color: #333;">🏠 Home</a></li>
@@ -89,6 +84,13 @@
             <li><a href="#contact" style="text-decoration: none; color: #333;">📝✨ Bucket List</a></li>
             <li><a href="#contact" style="text-decoration: none; color: #333;">📞 Contact</a></li>
         </ul>
+        <!-- TOMBOL DI BAWAH -->
+    <div style="margin-top: 30px;">
+        <button onclick="showWireframe()" class="btn-wireframe">
+            📄 Lihat Wireframe
+        </button>
+    </div>
+</aside>
     </aside>
 
     <main class="content-center">
@@ -219,10 +221,9 @@
             </div>
         </section>
 
-        <!-- PDF VIEWER -->
-<div id="cvSection" style="display:none; margin-top:40px;">
-    <h2>Curriculum Vitae</h2>
-    <iframe src="cv.pdf" width="100%" height="600px" style="border:none;"></iframe>
+        <div id="wireframeSection" style="display:none; margin-top:40px;">
+    <h2>Wireframe Website</h2>
+    <img src="wireframe.png" style="width:100%; border-radius:10px;">
 </div>
 
 
@@ -271,14 +272,15 @@ heart.remove();
 </script>
 
 <script src="script.js"></script>
-<script>
-function showPDF(){
-    document.getElementById("cvSection").style.display = "block";
 
-    // scroll ke PDF biar langsung kelihatan
-    document.getElementById("cvSection").scrollIntoView({
+<script>
+function showWireframe(){
+    document.getElementById("wireframeSection").style.display = "block";
+
+    document.getElementById("wireframeSection").scrollIntoView({
         behavior: "smooth"
     });
 }
+</script>
 </script>
 </body>
