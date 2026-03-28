@@ -81,3 +81,15 @@ document.addEventListener("click", (e) => {
         pdfPanel.classList.remove("active");
     }
 });
+let heart = document.createElement("div");
+heart.className = "heart";
+heart.innerHTML = "❤";
+
+heart.style.left = e.clientX + "px";
+heart.style.top = e.clientY + "px";
+heart.style.color = "#ff69b4"; // 👉 ini bikin pink
+
+document.body.appendChild(heart);
+setTimeout(() => {
+heart.remove();
+}, 1000);
