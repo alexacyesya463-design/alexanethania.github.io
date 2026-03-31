@@ -5,56 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Website Personal Alexa">
 <title>Alexa Nethania Cyesya</title>
-<title>Bucket List</title>
+
 <link rel="stylesheet" href="style.css">
-<style>
-    /* CSS KUNCI AGAR SIDEBAR SEJAJAR & FOTO TETAP BESAR */
-    .main-wrapper {
-        display: flex; /* Membuat Sidebar Kiri - Konten - Sidebar Kanan sejajar */
-        justify-content: center;
-        gap: 30px;
-        padding: 120px 2% 50px; 
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-
-    .sidebar-custom {
-        flex: 0 0 200px; /* Lebar sidebar tetap agar tidak menekan area tengah */
-        height: fit-content;
-        position: sticky;
-        top: 100px;
-        background: #fff;
-        padding: 20px;
-        border-radius: 20px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        z-index: 10;
-    }
-
-    .content-center {
-        flex: 1;
-        max-width: 1000px; /* Menjaga area foto dan tabel tetap luas */
-        min-width: 0;
-    }
-
-    /* Penyesuaian agar section tidak terlalu lebar saat di dalam flex */
-    .hero, .about, .portfolio, .contact {
-        padding: 40px 0;
-        width: 100%;
-    }
-
-    /* Memastikan tabel profil tetap rapi */
-    .profile-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-    }
-    
-
-    @media(max-width: 1150px) {
-        .sidebar-custom { display: none; } /* Sidebar sembunyi di layar kecil agar tidak sempit */
-        .main-wrapper { display: block; padding: 100px 5%; }
-    }
-</style>
 </head>
 
 <body>
@@ -78,13 +30,13 @@
     <aside class="sidebar-custom">
         <h3 style="color: #2563eb; font-size: 16px; border-bottom: 2px solid pink; padding-bottom: 5px;">Menu</h3>
         <ul style="list-style: none; padding-top: 10px;">
-            <li style="margin-bottom: 15px;"><a href="#home" style="text-decoration: none; color: #333;">🏠 Home</a></li>
-            <li style="margin-bottom: 15px;"><a href="#about" style="text-decoration: none; color: #333;">👤 About</a></li>
-            <li style="margin-bottom: 15px;"><a href="#portfolio" style="text-decoration: none; color: #333;">📂 Portfolio</a></li>
-            <li style="margin-bottom: 15px;"><a href="#bucket list" style="text-decoration: none; color: #333;">✨ Bucket List</a></li>
-            <li style="margin-bottom: 15px;"><a href="#contact" style="text-decoration: none; color: #333;">📞 Contact</a></li>
-        <button id="openPdfBtn" class="cute-btn">📄 Lihat Wireframe</button>
+            <li style="margin-bottom: 15px;"><a href="#home">🏠 Home</a></li>
+            <li style="margin-bottom: 15px;"><a href="#about">👤 About</a></li>
+            <li style="margin-bottom: 15px;"><a href="#portfolio">📂 Portfolio</a></li>
+            <li style="margin-bottom: 15px;"><a href="#bucket">✨ Bucket List</a></li>
+            <li style="margin-bottom: 15px;"><a href="#contact">📞 Contact</a></li>
         </ul>
+        <button id="openPdfBtn" class="cute-btn">📄 Lihat Wireframe</button>
     </aside>
 
     <main class="content-center">
@@ -96,36 +48,36 @@
                 <button class="btn-primary" onclick="document.getElementById('about').scrollIntoView()">See More</button>
             </div>
             <div class="hero-image">
-                <img src="foto.JPEG" alt="Foto Alexa" style="width: 420px; border-radius: 20px;">
+                <img src="foto.JPEG" alt="Foto Alexa">
             </div>
         </section>
 
         <section class="about" id="about">
             <h2 style="margin-bottom: 20px;">Tentang Saya</h2>
-            <div class="about-container" style="display: flex; gap: 40px; align-items: flex-start;">
-                <img src="foto.JPEG" alt="Foto Profil" style="width: 400px; border-radius: 20px;">
-                <div class="about-text" style="flex: 1;">
+            <div class="about-container">
+                <img src="foto.JPEG" alt="Foto Profil">
+                <div class="about-text">
                     <p style="font-style: italic; color: #666; margin-bottom: 15px;">"Hari ini mungkin sulit, tapi besok bisa lebih baik"</p>
                     <table class="profile-table">
-                        <tr><th style="background: #2563eb; color: white; padding: 12px; text-align: left; width: 35%;">Nama</th><td style="padding: 12px; border: 1px solid #ddd;">Alexa Nethania Cyesya</td></tr>
-                        <tr><th style="background: #2563eb; color: white; padding: 12px; text-align: left;">Program Studi</th><td style="padding: 12px; border: 1px solid #ddd;">Sistem Informasi</td></tr>
-                        <tr><th style="background: #2563eb; color: white; padding: 12px; text-align: left;">NPM</th><td style="padding: 12px; border: 1px solid #ddd;">2531145</td></tr>
-                        <tr><th style="background: #2563eb; color: white; padding: 12px; text-align: left;">Tanggal Lahir</th><td style="padding: 12px; border: 1px solid #ddd;">21 Oktober 2005</td></tr>
-                        <tr><th style="background: #2563eb; color: white; padding: 12px; text-align: left;">Alamat</th><td style="padding: 12px; border: 1px solid #ddd;">Batam, Kepulauan Riau</td></tr>
-                        <tr><th style="background: #2563eb; color: white; padding: 12px; text-align: left;">Hobi</th><td style="padding: 12px; border: 1px solid #ddd;">berenang & memasak</td></tr>
-                        <tr><th style="background: #2563eb; color: white; padding: 12px; text-align: left;">Makanan Favorit</th><td style="padding: 12px; border: 1px solid #ddd;">Nasi goreng & mie ayam</td></tr>
-                        <tr><th style="background: #2563eb; color: white; padding: 12px; text-align: left;">Warna Favorit</th><td style="padding: 12px; border: 1px solid #ddd;">pink dan navy</td></tr>
-                        <tr><th style="background: #2563eb; color: white; padding: 12px; text-align: left;">Cita-cita</th><td style="padding: 12px; border: 1px solid #ddd;">Business Analyst</td></tr>
+                        <tr><th>Nama</th><td>Alexa Nethania Cyesya</td></tr>
+                        <tr><th>Program Studi</th><td>Sistem Informasi</td></tr>
+                        <tr><th>NPM</th><td>2531145</td></tr>
+                        <tr><th>Tanggal Lahir</th><td>21 Oktober 2005</td></tr>
+                        <tr><th>Alamat</th><td>Batam, Kepulauan Riau</td></tr>
+                        <tr><th>Hobi</th><td>berenang & memasak</td></tr>
+                        <tr><th>Makanan Favorit</th><td>Nasi goreng & mie ayam</td></tr>
+                        <tr><th>Warna Favorit</th><td>pink dan navy</td></tr>
+                        <tr><th>Cita-cita</th><td>Business Analyst</td></tr>
                         <tr>
-                            <th style="background: #2563eb; color: white; padding: 12px; text-align: left;">Jenjang pendidikan</th>
-                            <td style="padding: 12px; border: 1px solid #ddd;">
+                            <th>Jenjang pendidikan</th>
+                            <td>
                                 - SD 002 Negri Kota Batam<br>
                                 - SMP 56 Negri Kota Batam<br>
                                 - SMA 4 Negri Kota Batam<br>
                                 - Universitas Internasional Batam
                             </td>
                         </tr>
-                        <tr><th style="background: #2563eb; color: white; padding: 12px; text-align: left;">Email</th><td style="padding: 12px; border: 1px solid #ddd;">alexanethania00@email.com</td></tr>
+                        <tr><th>Email</th><td>alexanethania00@email.com</td></tr>
                     </table>
                 </div>
             </div>
@@ -133,75 +85,68 @@
 
         <section class="portfolio" id="portfolio">
             <h2 style="margin-bottom: 20px;">Portfolio</h2>
-            <table class="portfolio-table" style="width: 100%; border-collapse: collapse; text-align: center;">
-                <tr style="background: #2563eb; color: white;">
-                    <th style="padding: 15px; border: 1px solid #ddd;">Nama Project</th>
-                    <th style="padding: 15px; border: 1px solid #ddd;">Jenis</th>
-                    <th style="padding: 15px; border: 1px solid #ddd;">Preview</th>
+            <table class="portfolio-table">
+                <tr>
+                    <th>Nama Project</th>
+                    <th>Jenis</th>
+                    <th>Preview</th>
                 </tr>
                 <tr>
-                    <td style="padding: 15px; border: 1px solid #ddd;">UI Design Kampus</td>
-                    <td style="padding: 15px; border: 1px solid #ddd;">Design</td>
-                    <td style="padding: 15px; border: 1px solid #ddd;">
-                        <img src="poster.kampus.jpg.jpeg" alt="Project" style="width: 150px; border-radius: 10px;"><br><br>
-                        <a href="#" class="btn-detail" style="color: #2563eb; text-decoration: none; font-weight: bold;">Lihat Detail</a>
+                    <td>UI Design Kampus</td>
+                    <td>Design</td>
+                    <td>
+                        <img src="poster.kampus.jpg.jpeg" alt="Project" style="width:150px;"><br><br>
+                        <a href="#" class="btn-detail">Lihat Detail</a>
                     </td>
                 </tr>
             </table>
         </section>
         
-        <div class="audio-player-container.">
-<p id="track-title">🎵 Music Favorit: Bruno Mars - Risk It All</p>
-    <audio id="myAudio">
-        <source src="bruno.mp3" type="audio/mpeg">
-    </audio>
-    <p id="time">00:00 / 00:00</p>
-    <div class="player-controls">
-        <button class="music-btn" onclick="rewind()">⏪ -10s</button>
-        <button class="music-btn" id="playBtn" onclick="togglePlay()">▶️ Play</button>
-        <button class="music-btn" onclick="forward()">10s ⏩</button>
-    
-        <input type="range" id="progressBar" value="0" max="100" onchange="changeProgress()">
-    </div>
+        <div class="audio-player-container">
+            <p id="track-title">🎵 Music Favorit: Bruno Mars - Risk It All</p>
+            <audio id="myAudio">
+                <source src="bruno.mp3" type="audio/mpeg">
+            </audio>
+            <p id="time">00:00 / 00:00</p>
+            <div class="player-controls">
+                <button class="music-btn" onclick="rewind()">⏪ -10s</button>
+                <button class="music-btn" id="playBtn" onclick="togglePlay()">▶️ Play</button>
+                <button class="music-btn" onclick="forward()">10s ⏩</button>
+                <input type="range" id="progressBar" value="0" max="100" onchange="changeProgress()">
+            </div>
+        </div>
 
-</div>
+        <!-- BUCKET LIST -->
+        <section class="bucket" id="bucket">
+            <h1>🌟 My Bucket List</h1>
+            <p>Hal-hal yang ingin saya capai di masa depan</p>
 
-<!-- FIX UTAMA BUCKET LIST -->
+            <div class="container">
+                <div class="card">
+                    <img src="Negara.png" alt="travel">
+                    <h3>Travel ke Luar Negeri</h3>
+                    <p>Ingin mengunjungi Paris dan Korea</p>
+                </div>
 
-<section class="bucket" id="bucket">
-    <h1>🌟 My Bucket List</h1>
-    <p>Hal-hal yang ingin saya capai di masa depan</p>
+                <div class="card">
+                    <img src="bahagia.jpg" alt="success">
+                    <h3>Menjadi Sukses</h3>
+                    <p>Membahagiakan orang tua dan punya karier bagus</p>
+                </div>
 
-```
-<div class="container">
+                <div class="card">
+                    <img src="bussines.jpeg" alt="business">
+                    <h3>Punya Bisnis Sendiri</h3>
+                    <p>Membuka usaha</p>
+                </div>
 
-    <div class="card">
-        <img src="Negara.png" alt="travel">
-        <h3>Travel ke Luar Negeri</h3>
-        <p>Ingin mengunjungi Paris dan Korea</p>
-    </div>
-
-    <div class="card">
-        <img src="bahagia.jpg" alt="success">
-        <h3>Menjadi Sukses</h3>
-        <p>Membahagiakan orang tua dan punya karier bagus</p>
-    </div>
-
-    <div class="card">
-        <img src="bussines.jpeg" alt="business">
-        <h3>Punya Bisnis Sendiri</h3>
-        <p>Membuka usaha </p>
-    </div>
-
-    <div class="card">
-        <img src="cewe coding.jpeg" alt="coding">
-        <h3>Mahir Coding</h3>
-        <p>Menjadi web developer profesional</p>
-    </div>
-
-</div>
-
-</section>
+                <div class="card">
+                    <img src="cewe coding.jpeg" alt="coding">
+                    <h3>Mahir Coding</h3>
+                    <p>Menjadi web developer profesional</p>
+                </div>
+            </div>
+        </section>
 
         <section class="contact" id="contact">
             <h2 style="margin-bottom: 20px; text-align: center;">Contact Me</h2>
@@ -218,21 +163,13 @@
     </main>
 
     <aside class="sidebar-custom">
-    <h3 style="color: #2563eb; font-size: 16px; border-bottom: 2px solid pink; padding-bottom: 5px;">Keahlian</h3>
-    <ul style="list-style: none; padding-top: 10px; font-size: 14px;">
-        <li style="margin-bottom: 8px;">🎨 UI/UX Design (Figma)</li>
-        <li style="margin-bottom: 8px;">📊 Microsoft wors</li>
-        <li style="margin-bottom: 8px;">💻 HTML & CSS</li>
-    </ul>
-
-    <h3 style="color: #2563eb; font-size: 16px; border-bottom: 2px solid pink; padding-bottom: 5px; margin-top: 25px;">Bahasa</h3>
-    <p style="font-size: 14px; margin-top: 10px;">🇮🇩 Indonesia (Native)</p>
-
-    <h3 style="color: #2563eb; font-size: 16px; border-bottom: 2px solid pink; padding-bottom: 5px; margin-top: 25px;">Fokus Saat Ini</h3>
-<p style="font-size: 13px; color: #444; margin-top: 10px; line-height: 1.6; font-style: italic;">
-    "Sedang mendalami logika pemrograman dan struktur data untuk memperkuat landasan analisis sistem. 🚀"
-</p>
-</aside>
+        <h3 style="color: #2563eb; font-size: 16px; border-bottom: 2px solid pink; padding-bottom: 5px;">Keahlian</h3>
+        <ul style="list-style: none; padding-top: 10px; font-size: 14px;">
+            <li>🎨 UI/UX Design (Figma)</li>
+            <li>📊 Microsoft Word</li>
+            <li>💻 HTML & CSS</li>
+        </ul>
+    </aside>
 
 </div>
 
@@ -247,23 +184,16 @@
 
 <script>
 document.addEventListener("mousemove", function(e){
-
-let heart = document.createElement("div");
-heart.className = "heart";
-heart.innerHTML = "💖";
-
-heart.style.left = e.clientX + "px";
-heart.style.top = e.clientY + "px";
-
-document.body.appendChild(heart);
-
-setTimeout(function(){
-heart.remove();
-},1000);
-
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = e.clientX + "px";
+    heart.style.top = e.clientY + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 1000);
 });
-
 </script>
 
 <script src="script.js"></script>
 </body>
+</html>
